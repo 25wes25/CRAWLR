@@ -1,0 +1,680 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8D7F0F82C2110B11F5D92BA2 /* Pods_CRAWLR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77F2388AE5838A5F7F5007EE /* Pods_CRAWLR.framework */; };
+		E87ADDFB23E36CE300454525 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87ADDFA23E36CE300454525 /* AppDelegate.swift */; };
+		E87ADDFD23E36CE300454525 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87ADDFC23E36CE300454525 /* SceneDelegate.swift */; };
+		E87ADDFF23E36CE300454525 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87ADDFE23E36CE300454525 /* ContentView.swift */; };
+		E87ADE0123E36CE400454525 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E87ADE0023E36CE400454525 /* Assets.xcassets */; };
+		E87ADE0423E36CE400454525 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E87ADE0323E36CE400454525 /* Preview Assets.xcassets */; };
+		E87ADE0723E36CE400454525 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E87ADE0523E36CE400454525 /* LaunchScreen.storyboard */; };
+		E87ADE1223E36CE400454525 /* CRAWLRTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87ADE1123E36CE400454525 /* CRAWLRTests.swift */; };
+		E87ADE1D23E36CE400454525 /* CRAWLRUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87ADE1C23E36CE400454525 /* CRAWLRUITests.swift */; };
+		E8D17AA523E376BC004D3F4C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E8D17AA423E376BC004D3F4C /* GoogleService-Info.plist */; };
+		E8D17AA623E376BC004D3F4C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E8D17AA423E376BC004D3F4C /* GoogleService-Info.plist */; };
+		E8D17AA723E376BC004D3F4C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E8D17AA423E376BC004D3F4C /* GoogleService-Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E87ADE0E23E36CE400454525 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E87ADDEF23E36CE300454525 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E87ADDF623E36CE300454525;
+			remoteInfo = CRAWLR;
+		};
+		E87ADE1923E36CE400454525 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E87ADDEF23E36CE300454525 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E87ADDF623E36CE300454525;
+			remoteInfo = CRAWLR;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		77F2388AE5838A5F7F5007EE /* Pods_CRAWLR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CRAWLR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EA5E114C2F1E7401CF92F10 /* Pods-CRAWLR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRAWLR.release.xcconfig"; path = "Pods/Target Support Files/Pods-CRAWLR/Pods-CRAWLR.release.xcconfig"; sourceTree = "<group>"; };
+		C0CDA772A79906B9AEFC9079 /* Pods-CRAWLR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRAWLR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CRAWLR/Pods-CRAWLR.debug.xcconfig"; sourceTree = "<group>"; };
+		E87ADDF723E36CE300454525 /* CRAWLR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CRAWLR.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E87ADDFA23E36CE300454525 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E87ADDFC23E36CE300454525 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E87ADDFE23E36CE300454525 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E87ADE0023E36CE400454525 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E87ADE0323E36CE400454525 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E87ADE0623E36CE400454525 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E87ADE0823E36CE400454525 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E87ADE0D23E36CE400454525 /* CRAWLRTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CRAWLRTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E87ADE1123E36CE400454525 /* CRAWLRTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAWLRTests.swift; sourceTree = "<group>"; };
+		E87ADE1323E36CE400454525 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E87ADE1823E36CE400454525 /* CRAWLRUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CRAWLRUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E87ADE1C23E36CE400454525 /* CRAWLRUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAWLRUITests.swift; sourceTree = "<group>"; };
+		E87ADE1E23E36CE400454525 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8D17AA423E376BC004D3F4C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E87ADDF423E36CE300454525 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D7F0F82C2110B11F5D92BA2 /* Pods_CRAWLR.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E87ADE0A23E36CE400454525 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E87ADE1523E36CE400454525 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		86E4000BC1086B0746D3C21C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				77F2388AE5838A5F7F5007EE /* Pods_CRAWLR.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B44F1E6CE80B75E19F591059 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C0CDA772A79906B9AEFC9079 /* Pods-CRAWLR.debug.xcconfig */,
+				8EA5E114C2F1E7401CF92F10 /* Pods-CRAWLR.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E87ADDEE23E36CE300454525 = {
+			isa = PBXGroup;
+			children = (
+				E87ADDF923E36CE300454525 /* CRAWLR */,
+				E87ADE1023E36CE400454525 /* CRAWLRTests */,
+				E87ADE1B23E36CE400454525 /* CRAWLRUITests */,
+				E87ADDF823E36CE300454525 /* Products */,
+				B44F1E6CE80B75E19F591059 /* Pods */,
+				86E4000BC1086B0746D3C21C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E87ADDF823E36CE300454525 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E87ADDF723E36CE300454525 /* CRAWLR.app */,
+				E87ADE0D23E36CE400454525 /* CRAWLRTests.xctest */,
+				E87ADE1823E36CE400454525 /* CRAWLRUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E87ADDF923E36CE300454525 /* CRAWLR */ = {
+			isa = PBXGroup;
+			children = (
+				E87ADDFA23E36CE300454525 /* AppDelegate.swift */,
+				E87ADDFC23E36CE300454525 /* SceneDelegate.swift */,
+				E87ADDFE23E36CE300454525 /* ContentView.swift */,
+				E87ADE0023E36CE400454525 /* Assets.xcassets */,
+				E87ADE0523E36CE400454525 /* LaunchScreen.storyboard */,
+				E87ADE0823E36CE400454525 /* Info.plist */,
+				E8D17AA423E376BC004D3F4C /* GoogleService-Info.plist */,
+				E87ADE0223E36CE400454525 /* Preview Content */,
+			);
+			path = CRAWLR;
+			sourceTree = "<group>";
+		};
+		E87ADE0223E36CE400454525 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E87ADE0323E36CE400454525 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E87ADE1023E36CE400454525 /* CRAWLRTests */ = {
+			isa = PBXGroup;
+			children = (
+				E87ADE1123E36CE400454525 /* CRAWLRTests.swift */,
+				E87ADE1323E36CE400454525 /* Info.plist */,
+			);
+			path = CRAWLRTests;
+			sourceTree = "<group>";
+		};
+		E87ADE1B23E36CE400454525 /* CRAWLRUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E87ADE1C23E36CE400454525 /* CRAWLRUITests.swift */,
+				E87ADE1E23E36CE400454525 /* Info.plist */,
+			);
+			path = CRAWLRUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E87ADDF623E36CE300454525 /* CRAWLR */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E87ADE2123E36CE400454525 /* Build configuration list for PBXNativeTarget "CRAWLR" */;
+			buildPhases = (
+				57D782F679DF38D9FA095104 /* [CP] Check Pods Manifest.lock */,
+				E87ADDF323E36CE300454525 /* Sources */,
+				E87ADDF423E36CE300454525 /* Frameworks */,
+				E87ADDF523E36CE300454525 /* Resources */,
+				EC9B51FB32230676D626C6DC /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CRAWLR;
+			productName = CRAWLR;
+			productReference = E87ADDF723E36CE300454525 /* CRAWLR.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E87ADE0C23E36CE400454525 /* CRAWLRTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E87ADE2423E36CE400454525 /* Build configuration list for PBXNativeTarget "CRAWLRTests" */;
+			buildPhases = (
+				E87ADE0923E36CE400454525 /* Sources */,
+				E87ADE0A23E36CE400454525 /* Frameworks */,
+				E87ADE0B23E36CE400454525 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E87ADE0F23E36CE400454525 /* PBXTargetDependency */,
+			);
+			name = CRAWLRTests;
+			productName = CRAWLRTests;
+			productReference = E87ADE0D23E36CE400454525 /* CRAWLRTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E87ADE1723E36CE400454525 /* CRAWLRUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E87ADE2723E36CE400454525 /* Build configuration list for PBXNativeTarget "CRAWLRUITests" */;
+			buildPhases = (
+				E87ADE1423E36CE400454525 /* Sources */,
+				E87ADE1523E36CE400454525 /* Frameworks */,
+				E87ADE1623E36CE400454525 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E87ADE1A23E36CE400454525 /* PBXTargetDependency */,
+			);
+			name = CRAWLRUITests;
+			productName = CRAWLRUITests;
+			productReference = E87ADE1823E36CE400454525 /* CRAWLRUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E87ADDEF23E36CE300454525 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Wesley Swanson";
+				TargetAttributes = {
+					E87ADDF623E36CE300454525 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					E87ADE0C23E36CE400454525 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = E87ADDF623E36CE300454525;
+					};
+					E87ADE1723E36CE400454525 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = E87ADDF623E36CE300454525;
+					};
+				};
+			};
+			buildConfigurationList = E87ADDF223E36CE300454525 /* Build configuration list for PBXProject "CRAWLR" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E87ADDEE23E36CE300454525;
+			productRefGroup = E87ADDF823E36CE300454525 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E87ADDF623E36CE300454525 /* CRAWLR */,
+				E87ADE0C23E36CE400454525 /* CRAWLRTests */,
+				E87ADE1723E36CE400454525 /* CRAWLRUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E87ADDF523E36CE300454525 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E87ADE0723E36CE400454525 /* LaunchScreen.storyboard in Resources */,
+				E8D17AA523E376BC004D3F4C /* GoogleService-Info.plist in Resources */,
+				E87ADE0423E36CE400454525 /* Preview Assets.xcassets in Resources */,
+				E87ADE0123E36CE400454525 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E87ADE0B23E36CE400454525 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8D17AA623E376BC004D3F4C /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E87ADE1623E36CE400454525 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8D17AA723E376BC004D3F4C /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		57D782F679DF38D9FA095104 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CRAWLR-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC9B51FB32230676D626C6DC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CRAWLR/Pods-CRAWLR-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CRAWLR/Pods-CRAWLR-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E87ADDF323E36CE300454525 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E87ADDFB23E36CE300454525 /* AppDelegate.swift in Sources */,
+				E87ADDFD23E36CE300454525 /* SceneDelegate.swift in Sources */,
+				E87ADDFF23E36CE300454525 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E87ADE0923E36CE400454525 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E87ADE1223E36CE400454525 /* CRAWLRTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E87ADE1423E36CE400454525 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E87ADE1D23E36CE400454525 /* CRAWLRUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E87ADE0F23E36CE400454525 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E87ADDF623E36CE300454525 /* CRAWLR */;
+			targetProxy = E87ADE0E23E36CE400454525 /* PBXContainerItemProxy */;
+		};
+		E87ADE1A23E36CE400454525 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E87ADDF623E36CE300454525 /* CRAWLR */;
+			targetProxy = E87ADE1923E36CE400454525 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E87ADE0523E36CE400454525 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E87ADE0623E36CE400454525 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E87ADE1F23E36CE400454525 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E87ADE2023E36CE400454525 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E87ADE2223E36CE400454525 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0CDA772A79906B9AEFC9079 /* Pods-CRAWLR.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"CRAWLR/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = CRAWLR/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = crawlrs.CRAWLR;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E87ADE2323E36CE400454525 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EA5E114C2F1E7401CF92F10 /* Pods-CRAWLR.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"CRAWLR/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = CRAWLR/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = crawlrs.CRAWLR;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E87ADE2523E36CE400454525 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CRAWLRTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = crawlrs.CRAWLRTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CRAWLR.app/CRAWLR";
+			};
+			name = Debug;
+		};
+		E87ADE2623E36CE400454525 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CRAWLRTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = crawlrs.CRAWLRTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CRAWLR.app/CRAWLR";
+			};
+			name = Release;
+		};
+		E87ADE2823E36CE400454525 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CRAWLRUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = crawlrs.CRAWLRUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CRAWLR;
+			};
+			name = Debug;
+		};
+		E87ADE2923E36CE400454525 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CRAWLRUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = crawlrs.CRAWLRUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CRAWLR;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E87ADDF223E36CE300454525 /* Build configuration list for PBXProject "CRAWLR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E87ADE1F23E36CE400454525 /* Debug */,
+				E87ADE2023E36CE400454525 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E87ADE2123E36CE400454525 /* Build configuration list for PBXNativeTarget "CRAWLR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E87ADE2223E36CE400454525 /* Debug */,
+				E87ADE2323E36CE400454525 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E87ADE2423E36CE400454525 /* Build configuration list for PBXNativeTarget "CRAWLRTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E87ADE2523E36CE400454525 /* Debug */,
+				E87ADE2623E36CE400454525 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E87ADE2723E36CE400454525 /* Build configuration list for PBXNativeTarget "CRAWLRUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E87ADE2823E36CE400454525 /* Debug */,
+				E87ADE2923E36CE400454525 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E87ADDEF23E36CE300454525 /* Project object */;
+}
