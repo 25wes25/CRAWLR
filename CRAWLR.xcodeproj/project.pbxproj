@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8D7F0F82C2110B11F5D92BA2 /* Pods_CRAWLR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77F2388AE5838A5F7F5007EE /* Pods_CRAWLR.framework */; };
+		E83B251523EA22EF007ECB33 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E83B251423EA22EF007ECB33 /* GoogleService-Info.plist */; };
 		E87ADDFB23E36CE300454525 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87ADDFA23E36CE300454525 /* AppDelegate.swift */; };
 		E87ADDFD23E36CE300454525 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87ADDFC23E36CE300454525 /* SceneDelegate.swift */; };
 		E87ADDFF23E36CE300454525 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87ADDFE23E36CE300454525 /* ContentView.swift */; };
@@ -16,9 +17,6 @@
 		E87ADE0723E36CE400454525 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E87ADE0523E36CE400454525 /* LaunchScreen.storyboard */; };
 		E87ADE1223E36CE400454525 /* CRAWLRTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87ADE1123E36CE400454525 /* CRAWLRTests.swift */; };
 		E87ADE1D23E36CE400454525 /* CRAWLRUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87ADE1C23E36CE400454525 /* CRAWLRUITests.swift */; };
-		E8D17AA523E376BC004D3F4C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E8D17AA423E376BC004D3F4C /* GoogleService-Info.plist */; };
-		E8D17AA623E376BC004D3F4C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E8D17AA423E376BC004D3F4C /* GoogleService-Info.plist */; };
-		E8D17AA723E376BC004D3F4C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E8D17AA423E376BC004D3F4C /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +40,7 @@
 		77F2388AE5838A5F7F5007EE /* Pods_CRAWLR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CRAWLR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EA5E114C2F1E7401CF92F10 /* Pods-CRAWLR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRAWLR.release.xcconfig"; path = "Pods/Target Support Files/Pods-CRAWLR/Pods-CRAWLR.release.xcconfig"; sourceTree = "<group>"; };
 		C0CDA772A79906B9AEFC9079 /* Pods-CRAWLR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRAWLR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CRAWLR/Pods-CRAWLR.debug.xcconfig"; sourceTree = "<group>"; };
+		E83B251423EA22EF007ECB33 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E87ADDF723E36CE300454525 /* CRAWLR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CRAWLR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E87ADDFA23E36CE300454525 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E87ADDFC23E36CE300454525 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,7 +55,6 @@
 		E87ADE1823E36CE400454525 /* CRAWLRUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CRAWLRUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E87ADE1C23E36CE400454525 /* CRAWLRUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAWLRUITests.swift; sourceTree = "<group>"; };
 		E87ADE1E23E36CE400454525 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E8D17AA423E376BC004D3F4C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +131,7 @@
 				E87ADE0023E36CE400454525 /* Assets.xcassets */,
 				E87ADE0523E36CE400454525 /* LaunchScreen.storyboard */,
 				E87ADE0823E36CE400454525 /* Info.plist */,
-				E8D17AA423E376BC004D3F4C /* GoogleService-Info.plist */,
+				E83B251423EA22EF007ECB33 /* GoogleService-Info.plist */,
 				E87ADE0223E36CE400454525 /* Preview Content */,
 			);
 			path = CRAWLR;
@@ -272,7 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E87ADE0723E36CE400454525 /* LaunchScreen.storyboard in Resources */,
-				E8D17AA523E376BC004D3F4C /* GoogleService-Info.plist in Resources */,
+				E83B251523EA22EF007ECB33 /* GoogleService-Info.plist in Resources */,
 				E87ADE0423E36CE400454525 /* Preview Assets.xcassets in Resources */,
 				E87ADE0123E36CE400454525 /* Assets.xcassets in Resources */,
 			);
@@ -282,7 +280,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8D17AA623E376BC004D3F4C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,7 +287,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8D17AA723E376BC004D3F4C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
