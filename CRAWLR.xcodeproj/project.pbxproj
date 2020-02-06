@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D6CE5D5CB1FAED211A36F98 /* Pods_CRAWLRTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75CAA9D17BDCFC159FAF8EA8 /* Pods_CRAWLRTests.framework */; };
 		8D7F0F82C2110B11F5D92BA2 /* Pods_CRAWLR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77F2388AE5838A5F7F5007EE /* Pods_CRAWLR.framework */; };
 		E83B251523EA22EF007ECB33 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E83B251423EA22EF007ECB33 /* GoogleService-Info.plist */; };
 		E87ADDFB23E36CE300454525 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87ADDFA23E36CE300454525 /* AppDelegate.swift */; };
@@ -37,9 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		75CAA9D17BDCFC159FAF8EA8 /* Pods_CRAWLRTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CRAWLRTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77F2388AE5838A5F7F5007EE /* Pods_CRAWLR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CRAWLR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EA5E114C2F1E7401CF92F10 /* Pods-CRAWLR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRAWLR.release.xcconfig"; path = "Pods/Target Support Files/Pods-CRAWLR/Pods-CRAWLR.release.xcconfig"; sourceTree = "<group>"; };
+		91609A0CFB53716843F41508 /* Pods-CRAWLRTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRAWLRTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CRAWLRTests/Pods-CRAWLRTests.release.xcconfig"; sourceTree = "<group>"; };
 		C0CDA772A79906B9AEFC9079 /* Pods-CRAWLR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRAWLR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CRAWLR/Pods-CRAWLR.debug.xcconfig"; sourceTree = "<group>"; };
+		D9AD8CE30AFFA298AB6331CB /* Pods-CRAWLRTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRAWLRTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CRAWLRTests/Pods-CRAWLRTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E83B251423EA22EF007ECB33 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E87ADDF723E36CE300454525 /* CRAWLR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CRAWLR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E87ADDFA23E36CE300454525 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D6CE5D5CB1FAED211A36F98 /* Pods_CRAWLRTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				77F2388AE5838A5F7F5007EE /* Pods_CRAWLR.framework */,
+				75CAA9D17BDCFC159FAF8EA8 /* Pods_CRAWLRTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -96,6 +102,8 @@
 			children = (
 				C0CDA772A79906B9AEFC9079 /* Pods-CRAWLR.debug.xcconfig */,
 				8EA5E114C2F1E7401CF92F10 /* Pods-CRAWLR.release.xcconfig */,
+				D9AD8CE30AFFA298AB6331CB /* Pods-CRAWLRTests.debug.xcconfig */,
+				91609A0CFB53716843F41508 /* Pods-CRAWLRTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -189,9 +197,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E87ADE2423E36CE400454525 /* Build configuration list for PBXNativeTarget "CRAWLRTests" */;
 			buildPhases = (
+				5FD9C03FAAE1A18ED7408CB0 /* [CP] Check Pods Manifest.lock */,
 				E87ADE0923E36CE400454525 /* Sources */,
 				E87ADE0A23E36CE400454525 /* Frameworks */,
 				E87ADE0B23E36CE400454525 /* Resources */,
+				D7C02EF99B900F23F68A7C6C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -315,7 +325,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EC9B51FB32230676D626C6DC /* [CP] Embed Pods Frameworks */ = {
+		5FD9C03FAAE1A18ED7408CB0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -323,22 +333,52 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-CRAWLR/Pods-CRAWLR-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"$(DERIVED_FILE_DIR)/Pods-CRAWLRTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CRAWLR/Pods-CRAWLR-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7C02EF99B900F23F68A7C6C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CRAWLRTests/Pods-CRAWLRTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CRAWLRTests/Pods-CRAWLRTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CRAWLRTests/Pods-CRAWLRTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC9B51FB32230676D626C6DC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CRAWLR/Pods-CRAWLR-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CRAWLR/Pods-CRAWLR-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CRAWLR/Pods-CRAWLR-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -553,6 +593,7 @@
 		};
 		E87ADE2523E36CE400454525 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9AD8CE30AFFA298AB6331CB /* Pods-CRAWLRTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -574,6 +615,7 @@
 		};
 		E87ADE2623E36CE400454525 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91609A0CFB53716843F41508 /* Pods-CRAWLRTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
