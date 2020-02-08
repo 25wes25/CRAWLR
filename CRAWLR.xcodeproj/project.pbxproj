@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		593321F223ECA583007EF61B /* LandingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593321F123ECA583007EF61B /* LandingPage.swift */; };
+		59649C8123ED2A1F00A0315E /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59649C8023ED2A1F00A0315E /* Dashboard.swift */; };
+		59649C8323ED382E00A0315E /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59649C8223ED382E00A0315E /* ForgotPassword.swift */; };
+		59649C8523ED383B00A0315E /* NewAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59649C8423ED383B00A0315E /* NewAccount.swift */; };
+		59649C8723ED3BD500A0315E /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59649C8623ED3BD500A0315E /* Background.swift */; };
 		5D6CE5D5CB1FAED211A36F98 /* Pods_CRAWLRTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75CAA9D17BDCFC159FAF8EA8 /* Pods_CRAWLRTests.framework */; };
 		8D7F0F82C2110B11F5D92BA2 /* Pods_CRAWLR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77F2388AE5838A5F7F5007EE /* Pods_CRAWLR.framework */; };
 		E83B251523EA22EF007ECB33 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E83B251423EA22EF007ECB33 /* GoogleService-Info.plist */; };
@@ -38,6 +43,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		593321F123ECA583007EF61B /* LandingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPage.swift; sourceTree = "<group>"; };
+		59649C8023ED2A1F00A0315E /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
+		59649C8223ED382E00A0315E /* ForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
+		59649C8423ED383B00A0315E /* NewAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccount.swift; sourceTree = "<group>"; };
+		59649C8623ED3BD500A0315E /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 		75CAA9D17BDCFC159FAF8EA8 /* Pods_CRAWLRTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CRAWLRTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77F2388AE5838A5F7F5007EE /* Pods_CRAWLR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CRAWLR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EA5E114C2F1E7401CF92F10 /* Pods-CRAWLR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRAWLR.release.xcconfig"; path = "Pods/Target Support Files/Pods-CRAWLR/Pods-CRAWLR.release.xcconfig"; sourceTree = "<group>"; };
@@ -88,6 +98,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		593321F023ECA562007EF61B /* Supporting Views */ = {
+			isa = PBXGroup;
+			children = (
+				59649C8623ED3BD500A0315E /* Background.swift */,
+				593321F123ECA583007EF61B /* LandingPage.swift */,
+				59649C8023ED2A1F00A0315E /* Dashboard.swift */,
+				59649C8423ED383B00A0315E /* NewAccount.swift */,
+				59649C8223ED382E00A0315E /* ForgotPassword.swift */,
+			);
+			path = "Supporting Views";
+			sourceTree = "<group>";
+		};
 		86E4000BC1086B0746D3C21C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +162,7 @@
 				E87ADE0523E36CE400454525 /* LaunchScreen.storyboard */,
 				E87ADE0823E36CE400454525 /* Info.plist */,
 				E83B251423EA22EF007ECB33 /* GoogleService-Info.plist */,
+				593321F023ECA562007EF61B /* Supporting Views */,
 				E87ADE0223E36CE400454525 /* Preview Content */,
 			);
 			path = CRAWLR;
@@ -414,7 +437,12 @@
 			files = (
 				E87ADDFB23E36CE300454525 /* AppDelegate.swift in Sources */,
 				E87ADDFD23E36CE300454525 /* SceneDelegate.swift in Sources */,
+				59649C8123ED2A1F00A0315E /* Dashboard.swift in Sources */,
+				59649C8723ED3BD500A0315E /* Background.swift in Sources */,
+				593321F223ECA583007EF61B /* LandingPage.swift in Sources */,
+				59649C8523ED383B00A0315E /* NewAccount.swift in Sources */,
 				E87ADDFF23E36CE300454525 /* ContentView.swift in Sources */,
+				59649C8323ED382E00A0315E /* ForgotPassword.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,6 +610,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"CRAWLR/Preview Content\"";
+				DEVELOPMENT_TEAM = 8NM7MR78SD;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = CRAWLR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -602,6 +631,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"CRAWLR/Preview Content\"";
+				DEVELOPMENT_TEAM = 8NM7MR78SD;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = CRAWLR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -622,6 +652,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CRAWLRTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -644,6 +675,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CRAWLRTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
