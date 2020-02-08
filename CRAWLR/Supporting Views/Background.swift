@@ -16,8 +16,6 @@ struct Background: View {
         ZStack{
             
             Image("Brick")
-                .resizable()
-                .edgesIgnoringSafeArea(.all)
             
             Image("Crawlr-clear")
                 .offset(y: -250)

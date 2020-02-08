@@ -13,6 +13,8 @@ struct LandingPage: View {
         NavigationView{
             ZStack{
                 Background()
+                    .offset(y: -45)
+                
                 NavigationLink(destination: Dashboard()){
                     Text("LOGIN")
                         .frame(width: 131 , height: 39)
