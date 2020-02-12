@@ -2,12 +2,11 @@
 //  AppDelegate.swift
 //  CRAWLR
 //
-//  Created by Wesley Swanson on 1/30/20.
+//  Created by Wesley Swanson on 2/11/20.
 //  Copyright © 2020 Wesley Swanson. All rights reserved.
 //
 
 import UIKit
-import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        FirebaseApp.configure()
         return true
     }
 
