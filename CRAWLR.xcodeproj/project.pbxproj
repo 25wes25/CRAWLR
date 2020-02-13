@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1E5AD0C4C3B171AAB7B0AD29 /* Pods_CRAWLR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 543B5F630308AB085FD4B543 /* Pods_CRAWLR.framework */; };
+		59E7A3CE23F4AC8E00B42135 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E7A3CD23F4AC8E00B42135 /* SignUpViewController.swift */; };
 		E62A9A19F6C5A7087DD749C0 /* Pods_CRAWLRTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B028A335A34AC63E74462CBD /* Pods_CRAWLRTests.framework */; };
 		E88BF6C723F340A60084435A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88BF6C623F340A60084435A /* AppDelegate.swift */; };
 		E88BF6C923F340A60084435A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88BF6C823F340A60084435A /* SceneDelegate.swift */; };
@@ -41,6 +42,7 @@
 		370CEEA9870DAB0C25B87EBC /* Pods-CRAWLR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRAWLR.release.xcconfig"; path = "Pods/Target Support Files/Pods-CRAWLR/Pods-CRAWLR.release.xcconfig"; sourceTree = "<group>"; };
 		4129C0C8FCB5B23D790983BF /* Pods-CRAWLRTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRAWLRTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CRAWLRTests/Pods-CRAWLRTests.debug.xcconfig"; sourceTree = "<group>"; };
 		543B5F630308AB085FD4B543 /* Pods_CRAWLR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CRAWLR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59E7A3CD23F4AC8E00B42135 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		91E830F04BEE61E25A352280 /* Pods-CRAWLR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRAWLR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CRAWLR/Pods-CRAWLR.debug.xcconfig"; sourceTree = "<group>"; };
 		B028A335A34AC63E74462CBD /* Pods_CRAWLRTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CRAWLRTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E88BF6C323F340A60084435A /* CRAWLR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CRAWLR.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +143,7 @@
 				E88BF6D123F340A90084435A /* LaunchScreen.storyboard */,
 				E88BF6D423F340A90084435A /* Info.plist */,
 				E88BF6F823F34D400084435A /* LoginViewController.swift */,
+				59E7A3CD23F4AC8E00B42135 /* SignUpViewController.swift */,
 			);
 			path = CRAWLR;
 			sourceTree = "<group>";
@@ -344,26 +347,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-CRAWLR/Pods-CRAWLR-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-CRAWLR/Pods-CRAWLR-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-CRAWLR/Pods-CRAWLR-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CRAWLR/Pods-CRAWLR-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CRAWLR/Pods-CRAWLR-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9880871B13C9D81966E135BB /* [CP] Embed Pods Frameworks */ = {
@@ -372,26 +364,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-CRAWLRTests/Pods-CRAWLRTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-CRAWLRTests/Pods-CRAWLRTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-CRAWLRTests/Pods-CRAWLRTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CRAWLRTests/Pods-CRAWLRTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CRAWLRTests/Pods-CRAWLRTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -405,6 +386,7 @@
 				E88BF6CB23F340A60084435A /* ViewController.swift in Sources */,
 				E88BF6C723F340A60084435A /* AppDelegate.swift in Sources */,
 				E88BF6C923F340A60084435A /* SceneDelegate.swift in Sources */,
+				59E7A3CE23F4AC8E00B42135 /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
