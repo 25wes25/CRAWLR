@@ -30,10 +30,10 @@ class SignUpViewController: UIViewController{
         , object: nil)
         
         firstNameTextField.attributedPlaceholder = NSAttributedString(string: "FIRST NAME*",
-                                                  attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
         
         lastNameTextField.attributedPlaceholder = NSAttributedString(string: "LAST NAME*",
-                                                         attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
         
         emailTextField.attributedPlaceholder = NSAttributedString(string: "EMAIL*",
         attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
@@ -68,15 +68,8 @@ class SignUpViewController: UIViewController{
         view.endEditing(true)
     }
         
-    @IBAction func onPressForgotPassword(_ sender: Any) {
-        
-    }
-    
-    @IBAction func onPressSignUp(_ sender: Any) {
-        self.performSegue(withIdentifier: "LoginSegueToSignUp", sender: self)
-    }
-    
-    @IBAction func onPressLogin(_ sender: Any) {
-        
+  
+    @IBAction func onPressContinue(_ sender: Any) {
+        self.performSegue(withIdentifier: "SignUpToSignUp2", sender: self)
     }
 }
