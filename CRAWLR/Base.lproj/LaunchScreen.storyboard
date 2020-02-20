@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,29 +12,35 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Brick" translatesAutoresizingMaskIntoConstraints="NO" id="qh1-ml-Pf1">
-                                <rect key="frame" x="-53" y="0.0" width="523" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="brickBackground" translatesAutoresizingMaskIntoConstraints="NO" id="W3y-3Y-Ac8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Crawlr-clear" translatesAutoresizingMaskIntoConstraints="NO" id="FSD-qH-Yrh">
-                                <rect key="frame" x="27" y="266" width="362" height="362"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="crawlrIcon" translatesAutoresizingMaskIntoConstraints="NO" id="GYh-XH-aDk">
+                                <rect key="frame" x="58" y="211" width="315" height="344"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="GYh-XH-aDk" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="81X-bK-QdL"/>
+                            <constraint firstAttribute="trailing" secondItem="W3y-3Y-Ac8" secondAttribute="trailing" id="QTB-3w-ycA"/>
+                            <constraint firstItem="GYh-XH-aDk" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Rni-Kd-Zmi"/>
+                            <constraint firstItem="W3y-3Y-Ac8" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="a9X-ob-nlE"/>
+                            <constraint firstItem="W3y-3Y-Ac8" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="eLQ-a1-HAh"/>
+                            <constraint firstAttribute="bottom" secondItem="W3y-3Y-Ac8" secondAttribute="bottom" id="zva-TU-VUy"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+            <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Brick" width="482" height="856"/>
-        <image name="Crawlr-clear" width="362" height="362"/>
+        <image name="brickBackground" width="465" height="827"/>
+        <image name="crawlrIcon" width="260" height="245"/>
     </resources>
 </document>
