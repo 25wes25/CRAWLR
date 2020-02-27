@@ -93,5 +93,6 @@ class SignUp2ViewController: UIViewController{
     
     @IBAction func OnPressCreateAccount(_ sender: Any) {
         // TO-DO
+        self.performSegue(withIdentifier: "SignUpSegueToTabBarController", sender: self)
     }
 }
