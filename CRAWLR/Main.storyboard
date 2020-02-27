@@ -729,7 +729,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="G6x-xB-EeQ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Search" id="iCX-HV-jcP"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="iCX-HV-jcP"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cgk-ji-Cp8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -743,9 +743,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="xQI-wb-ro7"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Dashboard" id="nCC-8D-6Be"/>
+                    <tabBarItem key="tabBarItem" title="Dashboard" image="dashboardTabIcon" id="nCC-8D-6Be"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6eZ-Od-Uuh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -782,7 +783,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="mWg-x3-5LR"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Social" id="fdY-bd-8EU"/>
+                    <tabBarItem key="tabBarItem" title="Social" image="house" catalog="system" id="fdY-bd-8EU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d9W-y8-ywc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -810,7 +811,10 @@
         <image name="chevron.left" catalog="system" width="48" height="64"/>
         <image name="circle" catalog="system" width="64" height="60"/>
         <image name="crawlrIcon" width="260" height="245"/>
+        <image name="dashboardTabIcon" width="48" height="41"/>
+        <image name="house" catalog="system" width="64" height="54"/>
         <image name="largecircle.fill.circle" catalog="system" width="64" height="60"/>
+        <image name="magnifyingglass" catalog="system" width="64" height="56"/>
         <image name="unlockIcon" width="19.5" height="24"/>
         <image name="userIcon" width="24.5" height="24.5"/>
     </resources>
