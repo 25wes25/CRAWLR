@@ -1,2 +1,7 @@
 GOATDate.xcodeproj/xcuserdata/*
 Pods/*
+*.xcuserstate
+
+Podfile.lock
+
+.DS_Store
