@@ -742,15 +742,69 @@
                     <view key="view" contentMode="scaleToFill" id="zZv-YH-W2J">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FRc-Y6-2IM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="598"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FbN-fH-nnK">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="598"/>
+                                        <subviews>
+                                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JEx-dX-Ixb">
+                                                <rect key="frame" x="0.0" y="0.0" width="383" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                <items>
+                                                    <navigationItem title="Title" id="Tej-sU-3Gq"/>
+                                                </items>
+                                            </navigationBar>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aF4-IR-Tad">
+                                                <rect key="frame" x="8" y="94" width="179" height="168"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Tequila" image="TequilaIcon"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3RM-Sg-TK6">
+                                                <rect key="frame" x="188" y="94" width="179" height="168"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Whiskey" image="WhiskeyIcon"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7EL-rg-Z4o">
+                                                <rect key="frame" x="8" y="262" width="179" height="168"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Vodka" image="vodkaIcon"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ca5-u0-Jvp">
+                                                <rect key="frame" x="188" y="262" width="179" height="168"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Moonshine" image="moonshine"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="FbN-fH-nnK" firstAttribute="leading" secondItem="FRc-Y6-2IM" secondAttribute="leading" id="8OE-5B-dW8"/>
+                                    <constraint firstAttribute="bottom" secondItem="FbN-fH-nnK" secondAttribute="bottom" id="Ybx-VH-fk8"/>
+                                    <constraint firstItem="FbN-fH-nnK" firstAttribute="top" secondItem="FRc-Y6-2IM" secondAttribute="top" id="ZQ4-xB-qlx"/>
+                                    <constraint firstAttribute="trailing" secondItem="FbN-fH-nnK" secondAttribute="trailing" id="bmd-bL-q5h"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xQI-wb-ro7" firstAttribute="bottom" secondItem="FRc-Y6-2IM" secondAttribute="bottom" id="9TO-kW-SIx"/>
+                            <constraint firstItem="FRc-Y6-2IM" firstAttribute="leading" secondItem="xQI-wb-ro7" secondAttribute="leading" id="PeE-kq-5AX"/>
+                            <constraint firstItem="xQI-wb-ro7" firstAttribute="trailing" secondItem="FRc-Y6-2IM" secondAttribute="trailing" id="XYp-gZ-35A"/>
+                            <constraint firstItem="FRc-Y6-2IM" firstAttribute="top" secondItem="xQI-wb-ro7" secondAttribute="top" id="gAA-Vk-5p5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="xQI-wb-ro7"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Dashboard" image="dashboardTabIcon" id="nCC-8D-6Be"/>
+                    <tabBarItem key="tabBarItem" title="Dashboard" image="dashboardTabIcon" id="nCC-8D-6Be">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6eZ-Od-Uuh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4046" y="511"/>
+            <point key="canvasLocation" x="4045.5999999999999" y="510.49475262368821"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Cs7-KS-daE">
@@ -807,6 +861,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="TequilaIcon" width="792" height="792.5"/>
+        <image name="WhiskeyIcon" width="792" height="792.5"/>
         <image name="brickBackground" width="465" height="827"/>
         <image name="chevron.left" catalog="system" width="48" height="64"/>
         <image name="circle" catalog="system" width="64" height="60"/>
@@ -815,7 +871,9 @@
         <image name="house" catalog="system" width="64" height="54"/>
         <image name="largecircle.fill.circle" catalog="system" width="64" height="60"/>
         <image name="magnifyingglass" catalog="system" width="64" height="56"/>
+        <image name="moonshine" width="792" height="792.5"/>
         <image name="unlockIcon" width="19.5" height="24"/>
         <image name="userIcon" width="24.5" height="24.5"/>
+        <image name="vodkaIcon" width="792" height="792.5"/>
     </resources>
 </document>
