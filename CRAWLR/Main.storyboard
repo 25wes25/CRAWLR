@@ -156,7 +156,7 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userIcon" translatesAutoresizingMaskIntoConstraints="NO" id="hZX-jh-ZBo">
-                                                        <rect key="frame" x="0.0" y="31.999999999999996" width="25.000000000000007" height="25.000000000000004"/>
+                                                        <rect key="frame" x="0.0" y="32" width="25" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="25" id="UVW-2e-jNn"/>
                                                             <constraint firstAttribute="width" constant="25" id="qCs-w7-ryv"/>
@@ -359,7 +359,7 @@
                                                     <constraint firstAttribute="height" constant="1" id="7KN-IJ-Ra1"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZbH-As-lH8">
+                                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZbH-As-lH8">
                                                 <rect key="frame" x="123.5" y="426" width="128" height="40"/>
                                                 <color key="backgroundColor" red="0.0" green="0.8092161417" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -447,6 +447,7 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="dcm-WP-TBF"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="continueButton" destination="ZbH-As-lH8" id="ehO-q6-jAX"/>
                         <outlet property="emailTextField" destination="H7V-To-VPT" id="Tky-fB-es2"/>
                         <outlet property="firstNameTextField" destination="Ols-jJ-TCT" id="CDj-0V-IVb"/>
                         <outlet property="lastNameTextField" destination="3Ub-pS-aFs" id="WzY-16-mpV"/>
@@ -634,7 +635,7 @@
                                                     <constraint firstAttribute="height" constant="1" id="HiV-St-Nqd"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkX-aC-4Zl">
+                                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkX-aC-4Zl">
                                                 <rect key="frame" x="111.5" y="434.5" width="152" height="40"/>
                                                 <color key="backgroundColor" red="0.0" green="0.8092161417" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -707,6 +708,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="ageTextField" destination="svp-se-aeu" id="TBr-bg-Fi7"/>
+                        <outlet property="createAccountButton" destination="bkX-aC-4Zl" id="00L-R1-13K"/>
                         <outlet property="femaleButton" destination="yd3-ub-gkG" id="tv6-Cm-9MP"/>
                         <outlet property="maleButton" destination="egL-pL-j5I" id="xXK-Q2-9fL"/>
                         <outlet property="otherButton" destination="Q8E-Hh-SEQ" id="WG1-Wb-DX0"/>

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginViewController: UIViewController {
     @IBOutlet weak var usernameTextField: UITextField!
@@ -56,6 +57,11 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func onPressLogin(_ sender: Any) {
-        
+        guard let username = usernameTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        Auth.auth().signIn(withEmail: username, password: password) { [weak self] authResult, error in
+            print(authResult?.user)
+            print(error?.localizedDescription)
+        }
     }
 }
