@@ -65,6 +65,9 @@ class LoginViewController: UIViewController {
                 alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
                 self.present(alertController, animated: true, completion: nil)
             }
+            else{
+                self.performSegue(withIdentifier: "LoginSegueToTabBarController", sender: self)
+            }
         }
     }
 }
