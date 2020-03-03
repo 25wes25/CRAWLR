@@ -135,6 +135,18 @@ class SignUp2ViewController: UIViewController {
                     alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
                     self.present(alertController, animated: true, completion: nil)
                 }
+                else{
+                    Auth.auth().signIn(withEmail: self.email, password: self.password) { authResult, error in
+                        if(error != nil){
+                            let alertController = UIAlertController.init(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                            alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                            self.present(alertController, animated: true, completion: nil)
+                        }
+                        else{
+                            self.performSegue(withIdentifier: "SignUpSegueToTabBarController", sender: self)
+                        }
+                    }
+                }
             }
         }
     }
