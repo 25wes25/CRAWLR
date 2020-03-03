@@ -359,7 +359,7 @@
                                                     <constraint firstAttribute="height" constant="1" id="7KN-IJ-Ra1"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZbH-As-lH8">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZbH-As-lH8">
                                                 <rect key="frame" x="123.5" y="426" width="128" height="40"/>
                                                 <color key="backgroundColor" red="0.0" green="0.8092161417" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -635,7 +635,7 @@
                                                     <constraint firstAttribute="height" constant="1" id="HiV-St-Nqd"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkX-aC-4Zl">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkX-aC-4Zl">
                                                 <rect key="frame" x="111.5" y="434.5" width="152" height="40"/>
                                                 <color key="backgroundColor" red="0.0" green="0.8092161417" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>

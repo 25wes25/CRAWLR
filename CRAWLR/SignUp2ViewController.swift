@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class SignUp2ViewController: UIViewController{
+class SignUp2ViewController: UIViewController {
   
     @IBOutlet weak var createAccountButton: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -20,14 +20,13 @@ class SignUp2ViewController: UIViewController{
     @IBOutlet weak var ageTextField: UITextField!
     var email: String = ""
     var password: String = ""
-    var validateTextFields = false
+    var validateButtons = false
     
     var handle: AuthStateDidChangeListenerHandle?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        setupAddTargetIsNotEmptyTextFields()
 
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
@@ -54,44 +53,6 @@ class SignUp2ViewController: UIViewController{
         super.viewWillDisappear(animated)
         Auth.auth().removeStateDidChangeListener(handle!)
     }
-       
-    func setupAddTargetIsNotEmptyTextFields() {
-            createAccountButton.isEnabled = false
-            usernameTextField.addTarget(self, action: #selector(textFieldsIsNotEmpty),
-                                        for: .editingChanged)
-            ageTextField.addTarget(self, action: #selector(textFieldsIsNotEmpty),
-                                   for: .editingChanged)
-            maleButton.addTarget(self, action: #selector(genderSelectionIsNotEmpty), for: .allEvents)
-            femaleButton.addTarget(self, action: #selector(genderSelectionIsNotEmpty), for: .allEvents)
-            otherButton.addTarget(self, action: #selector(genderSelectionIsNotEmpty), for: .allEvents)
-    }
-    
-    @objc func genderSelectionIsNotEmpty(sender: UIButton){
-        if((maleButton.isSelected || femaleButton.isSelected || otherButton.isSelected) && validateTextFields){
-            createAccountButton.alpha = 1
-            createAccountButton.isEnabled = true
-        }
-        else{
-            createAccountButton.alpha = 0.5
-            createAccountButton.isEnabled = false
-        }
-    }
-    
-    @objc func textFieldsIsNotEmpty(sender: UITextField) {
-
-        sender.text = sender.text?.trimmingCharacters(in: .whitespaces)
-        
-        guard
-            let username = usernameTextField.text, !username.isEmpty,
-            let age = ageTextField.text, !age.isEmpty
-            else{
-                createAccountButton.alpha = 0.5
-                self.createAccountButton.isEnabled = false
-                return
-            }
-            // enable createAccountButton if all conditions are met
-            validateTextFields = true
-    }
     
     @objc func keyboardWillShow(notification:NSNotification){
             let userInfo = notification.userInfo!
@@ -115,10 +76,12 @@ class SignUp2ViewController: UIViewController{
     
     @IBAction func onPressMaleButton(_ sender: UIButton) {
         if sender.isSelected {
+            validateButtons = false
             sender.isSelected = false
             femaleButton.isSelected = false
             otherButton.isSelected = false
         } else{
+            validateButtons = true
             sender.isSelected = true
             femaleButton.isSelected = false
             otherButton.isSelected = false
@@ -127,10 +90,12 @@ class SignUp2ViewController: UIViewController{
     
     @IBAction func onPressFemaleButton(_ sender: UIButton) {
         if sender.isSelected {
+            validateButtons = false
             sender.isSelected = false
             maleButton.isSelected = false
             otherButton.isSelected = false
         } else{
+            validateButtons = true
             sender.isSelected = true
             maleButton.isSelected = false
             otherButton.isSelected = false
@@ -139,10 +104,12 @@ class SignUp2ViewController: UIViewController{
     
     @IBAction func onPressOtherButton(_ sender: UIButton) {
         if sender.isSelected {
+            validateButtons = false
             sender.isSelected = false
             femaleButton.isSelected = false
             maleButton.isSelected = false
         } else{
+            validateButtons = true
             sender.isSelected = true
             femaleButton.isSelected = false
             maleButton.isSelected = false
@@ -150,9 +117,25 @@ class SignUp2ViewController: UIViewController{
     }
     
     @IBAction func OnPressCreateAccount(_ sender: Any) {
-        Auth.auth().createUser(withEmail: self.email, password: self.password) { authResult, error in
-          print(authResult?.user)
-          print(error?.localizedDescription)
+        let age: Int? = Int(ageTextField.text!)
+        if(usernameTextField.text == "" || ageTextField.text == "" || validateButtons == false){
+            let alertController = UIAlertController.init(title: "Error", message: "Please fill in all fields", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+        }
+        else if(age ?? 0 < 21){
+            let alertController = UIAlertController.init(title: "Error", message: "You must be at least 21 to create an account", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+        }
+        else{
+            Auth.auth().createUser(withEmail: self.email, password: self.password) { authResult, error in
+                if(error != nil){
+                    let alertController = UIAlertController.init(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                    self.present(alertController, animated: true, completion: nil)
+                }
+            }
         }
     }
 }
