@@ -57,16 +57,24 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func onPressLogin(_ sender: Any) {
-        guard let username = usernameTextField.text else { return }
-        guard let password = passwordTextField.text else { return }
-        Auth.auth().signIn(withEmail: username, password: password) { authResult, error in
-            if(error != nil){
-                let alertController = UIAlertController.init(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
-                alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-                self.present(alertController, animated: true, completion: nil)
-            }
-            else{
-                self.performSegue(withIdentifier: "LoginSegueToTabBarController", sender: self)
+        let username = usernameTextField.text!
+        let password = passwordTextField.text!
+        
+        if(username == "" || password == ""){
+            let alertController = UIAlertController.init(title: "Error", message: "Please enter an email and password", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+        }
+        else{
+            Auth.auth().signIn(withEmail: username, password: password) { authResult, error in
+                if(error != nil){
+                    let alertController = UIAlertController.init(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                    self.present(alertController, animated: true, completion: nil)
+                }
+                else{
+                    self.performSegue(withIdentifier: "LoginSegueToTabBarController", sender: self)
+                }
             }
         }
     }
