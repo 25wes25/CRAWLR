@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1E5AD0C4C3B171AAB7B0AD29 /* Pods_CRAWLR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 543B5F630308AB085FD4B543 /* Pods_CRAWLR.framework */; };
 		5935107C23F613BA001761B8 /* SignUp2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5935107B23F613BA001761B8 /* SignUp2ViewController.swift */; };
+		59AC50A224063906007F0C9C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 59AC50A124063906007F0C9C /* GoogleService-Info.plist */; };
 		59E7A3CE23F4AC8E00B42135 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E7A3CD23F4AC8E00B42135 /* SignUpViewController.swift */; };
 		E62A9A19F6C5A7087DD749C0 /* Pods_CRAWLRTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B028A335A34AC63E74462CBD /* Pods_CRAWLRTests.framework */; };
 		E88BF6C723F340A60084435A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88BF6C623F340A60084435A /* AppDelegate.swift */; };
@@ -44,6 +45,7 @@
 		4129C0C8FCB5B23D790983BF /* Pods-CRAWLRTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRAWLRTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CRAWLRTests/Pods-CRAWLRTests.debug.xcconfig"; sourceTree = "<group>"; };
 		543B5F630308AB085FD4B543 /* Pods_CRAWLR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CRAWLR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5935107B23F613BA001761B8 /* SignUp2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp2ViewController.swift; sourceTree = "<group>"; };
+		59AC50A124063906007F0C9C /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		59E7A3CD23F4AC8E00B42135 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		91E830F04BEE61E25A352280 /* Pods-CRAWLR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRAWLR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CRAWLR/Pods-CRAWLR.debug.xcconfig"; sourceTree = "<group>"; };
 		B028A335A34AC63E74462CBD /* Pods_CRAWLRTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CRAWLRTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,6 +146,7 @@
 				E88BF6CF23F340A90084435A /* Assets.xcassets */,
 				E88BF6D123F340A90084435A /* LaunchScreen.storyboard */,
 				E88BF6D423F340A90084435A /* Info.plist */,
+				59AC50A124063906007F0C9C /* GoogleService-Info.plist */,
 				E88BF6F823F34D400084435A /* LoginViewController.swift */,
 				59E7A3CD23F4AC8E00B42135 /* SignUpViewController.swift */,
 				5935107B23F613BA001761B8 /* SignUp2ViewController.swift */,
@@ -278,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E88BF6F723F348A40084435A /* Main.storyboard in Resources */,
+				59AC50A224063906007F0C9C /* GoogleService-Info.plist in Resources */,
 				E88BF6D323F340A90084435A /* LaunchScreen.storyboard in Resources */,
 				E88BF6D023F340A90084435A /* Assets.xcassets in Resources */,
 			);

@@ -237,6 +237,7 @@
                         <outlet property="scrollView" destination="XGg-jA-ivq" id="jSx-hx-Zkl"/>
                         <outlet property="usernameTextField" destination="39E-Wp-RI9" id="RYR-7c-4Y6"/>
                         <segue destination="noc-2x-G5b" kind="show" identifier="LoginSegueToSignUp" id="Ryp-wA-V18"/>
+                        <segue destination="Cyi-CX-HCU" kind="showDetail" identifier="LoginSegueToTabBarController" id="qCA-XQ-Tgc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -447,6 +448,7 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="dcm-WP-TBF"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="continueButton" destination="ZbH-As-lH8" id="ehO-q6-jAX"/>
                         <outlet property="emailTextField" destination="H7V-To-VPT" id="Tky-fB-es2"/>
                         <outlet property="firstNameTextField" destination="Ols-jJ-TCT" id="CDj-0V-IVb"/>
                         <outlet property="lastNameTextField" destination="3Ub-pS-aFs" id="WzY-16-mpV"/>
@@ -707,6 +709,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="ageTextField" destination="svp-se-aeu" id="TBr-bg-Fi7"/>
+                        <outlet property="createAccountButton" destination="bkX-aC-4Zl" id="00L-R1-13K"/>
                         <outlet property="femaleButton" destination="yd3-ub-gkG" id="tv6-Cm-9MP"/>
                         <outlet property="maleButton" destination="egL-pL-j5I" id="xXK-Q2-9fL"/>
                         <outlet property="otherButton" destination="Q8E-Hh-SEQ" id="WG1-Wb-DX0"/>
@@ -814,4 +817,7 @@
         <image name="unlockIcon" width="19.5" height="24"/>
         <image name="userIcon" width="24.5" height="24.5"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="qCA-XQ-Tgc"/>
+    </inferredMetricsTieBreakers>
 </document>
