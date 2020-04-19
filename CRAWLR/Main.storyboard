@@ -722,37 +722,92 @@
             </objects>
             <point key="canvasLocation" x="1911.594202898551" y="115.17857142857142"/>
         </scene>
-        <!--Item 2-->
+        <!--Search View Controller-->
         <scene sceneID="Gyk-on-TcL">
             <objects>
-                <viewController id="Rs5-5t-Uxu" sceneMemberID="viewController">
+                <viewController id="Rs5-5t-Uxu" userLabel="Search View Controller" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W8l-BF-bde">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="G6x-xB-EeQ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="iCX-HV-jcP"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="iCX-HV-jcP"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cgk-ji-Cp8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4142" y="448"/>
+            <point key="canvasLocation" x="4046" y="-172"/>
         </scene>
-        <!--Item 1-->
+        <!--Dashboard View Controller-->
         <scene sceneID="Nf2-km-TkY">
             <objects>
-                <viewController id="dM3-QL-24k" sceneMemberID="viewController">
+                <viewController id="dM3-QL-24k" userLabel="Dashboard View Controller" customClass="DashboardViewController" customModule="CRAWLR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zZv-YH-W2J">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FRc-Y6-2IM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="598"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FbN-fH-nnK">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="598"/>
+                                        <subviews>
+                                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JEx-dX-Ixb">
+                                                <rect key="frame" x="0.0" y="0.0" width="383" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                <items>
+                                                    <navigationItem title="Title" id="Tej-sU-3Gq"/>
+                                                </items>
+                                            </navigationBar>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aF4-IR-Tad">
+                                                <rect key="frame" x="8" y="94" width="179" height="168"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Tequila" image="TequilaIcon"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3RM-Sg-TK6">
+                                                <rect key="frame" x="188" y="94" width="179" height="168"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Whiskey" image="WhiskeyIcon"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7EL-rg-Z4o">
+                                                <rect key="frame" x="8" y="262" width="179" height="168"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Vodka" image="vodkaIcon"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ca5-u0-Jvp">
+                                                <rect key="frame" x="188" y="262" width="179" height="168"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Moonshine" image="moonshine"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="FbN-fH-nnK" firstAttribute="leading" secondItem="FRc-Y6-2IM" secondAttribute="leading" id="8OE-5B-dW8"/>
+                                    <constraint firstAttribute="bottom" secondItem="FbN-fH-nnK" secondAttribute="bottom" id="Ybx-VH-fk8"/>
+                                    <constraint firstItem="FbN-fH-nnK" firstAttribute="top" secondItem="FRc-Y6-2IM" secondAttribute="top" id="ZQ4-xB-qlx"/>
+                                    <constraint firstAttribute="trailing" secondItem="FbN-fH-nnK" secondAttribute="trailing" id="bmd-bL-q5h"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xQI-wb-ro7" firstAttribute="bottom" secondItem="FRc-Y6-2IM" secondAttribute="bottom" id="9TO-kW-SIx"/>
+                            <constraint firstItem="FRc-Y6-2IM" firstAttribute="leading" secondItem="xQI-wb-ro7" secondAttribute="leading" id="PeE-kq-5AX"/>
+                            <constraint firstItem="xQI-wb-ro7" firstAttribute="trailing" secondItem="FRc-Y6-2IM" secondAttribute="trailing" id="XYp-gZ-35A"/>
+                            <constraint firstItem="FRc-Y6-2IM" firstAttribute="top" secondItem="xQI-wb-ro7" secondAttribute="top" id="gAA-Vk-5p5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="xQI-wb-ro7"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="nCC-8D-6Be"/>
+                    <tabBarItem key="tabBarItem" title="Dashboard" image="dashboardTabIcon" id="nCC-8D-6Be">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6eZ-Od-Uuh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4142" y="-217"/>
+            <point key="canvasLocation" x="4045.5999999999999" y="510.49475262368821"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Cs7-KS-daE">
@@ -765,57 +820,64 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="dM3-QL-24k" kind="relationship" relationship="viewControllers" id="7oq-nJ-ogP"/>
-                        <segue destination="Rs5-5t-Uxu" kind="relationship" relationship="viewControllers" id="5oa-q4-AfD"/>
-                        <segue destination="w8m-9z-7fP" kind="relationship" relationship="viewControllers" id="FCO-a9-0SB"/>
-                        <segue destination="wlE-WY-sq2" kind="relationship" relationship="viewControllers" id="kL4-ZG-I1c"/>
+                        <segue destination="w8m-9z-7fP" kind="relationship" relationship="viewControllers" id="e9w-U8-HES"/>
+                        <segue destination="Rs5-5t-Uxu" kind="relationship" relationship="viewControllers" id="ORT-Of-yFm"/>
+                        <segue destination="dM3-QL-24k" kind="relationship" relationship="viewControllers" id="T9P-bb-z3H"/>
+                        <segue destination="wlE-WY-sq2" kind="relationship" relationship="viewControllers" id="GXB-Ye-UNd"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tNG-xh-qyd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3186" y="116"/>
         </scene>
-        <!--Item 1-->
+        <!--Social View Controller-->
         <scene sceneID="5rP-fx-3bD">
             <objects>
-                <viewController id="w8m-9z-7fP" sceneMemberID="viewController">
+                <viewController id="w8m-9z-7fP" userLabel="Social View Controller" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ly2-AI-nIi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="mWg-x3-5LR"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="fdY-bd-8EU"/>
+                    <tabBarItem key="tabBarItem" title="Social" image="house" catalog="system" id="fdY-bd-8EU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d9W-y8-ywc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4142" y="-879"/>
+            <point key="canvasLocation" x="4046" y="-888"/>
         </scene>
-        <!--Item 1-->
+        <!--Profile View Controller-->
         <scene sceneID="keG-KF-2FN">
             <objects>
-                <viewController id="wlE-WY-sq2" sceneMemberID="viewController">
+                <viewController id="wlE-WY-sq2" userLabel="Profile View Controller" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lm7-h4-50h">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="oZC-PW-Trw"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="ap5-a5-f0b"/>
+                    <tabBarItem key="tabBarItem" title="Profile" id="ap5-a5-f0b"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hfh-3m-BFN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4142" y="1113"/>
+            <point key="canvasLocation" x="4046" y="1180"/>
         </scene>
     </scenes>
     <resources>
+        <image name="TequilaIcon" width="792" height="792.5"/>
+        <image name="WhiskeyIcon" width="792" height="792.5"/>
         <image name="brickBackground" width="465" height="827"/>
         <image name="chevron.left" catalog="system" width="48" height="64"/>
         <image name="circle" catalog="system" width="64" height="60"/>
         <image name="crawlrIcon" width="260" height="245"/>
+        <image name="dashboardTabIcon" width="48" height="41"/>
+        <image name="house" catalog="system" width="64" height="54"/>
         <image name="largecircle.fill.circle" catalog="system" width="64" height="60"/>
+        <image name="magnifyingglass" catalog="system" width="64" height="56"/>
+        <image name="moonshine" width="792" height="792.5"/>
         <image name="unlockIcon" width="19.5" height="24"/>
         <image name="userIcon" width="24.5" height="24.5"/>
+        <image name="vodkaIcon" width="792" height="792.5"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="qCA-XQ-Tgc"/>
