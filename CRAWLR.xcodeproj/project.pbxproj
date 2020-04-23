@@ -13,6 +13,12 @@
 		59E7A3CE23F4AC8E00B42135 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E7A3CD23F4AC8E00B42135 /* SignUpViewController.swift */; };
 		E4EB0450240860110096B39A /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EB044F240860110096B39A /* DashboardViewController.swift */; };
 		E62A9A19F6C5A7087DD749C0 /* Pods_CRAWLRTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B028A335A34AC63E74462CBD /* Pods_CRAWLRTests.framework */; };
+		E84257C32451812D0071D865 /* SessionManager+CrawlrCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84257C22451812D0071D865 /* SessionManager+CrawlrCustom.swift */; };
+		E84257C5245181700071D865 /* Encodable+CrawlrCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84257C4245181700071D865 /* Encodable+CrawlrCustom.swift */; };
+		E874CE9D245145D00026C4A6 /* ApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E874CE9C245145D00026C4A6 /* ApiHelper.swift */; };
+		E874CE9F245148B80026C4A6 /* ApiModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E874CE9E245148B80026C4A6 /* ApiModels.swift */; };
+		E874CEA1245151570026C4A6 /* ApiResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = E874CEA0245151570026C4A6 /* ApiResponses.swift */; };
+		E874CEA3245161B10026C4A6 /* DataResponse+CrawlrCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = E874CEA2245161B10026C4A6 /* DataResponse+CrawlrCustom.swift */; };
 		E88BF6C723F340A60084435A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88BF6C623F340A60084435A /* AppDelegate.swift */; };
 		E88BF6C923F340A60084435A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88BF6C823F340A60084435A /* SceneDelegate.swift */; };
 		E88BF6CB23F340A60084435A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88BF6CA23F340A60084435A /* ViewController.swift */; };
@@ -51,6 +57,12 @@
 		91E830F04BEE61E25A352280 /* Pods-CRAWLR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRAWLR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CRAWLR/Pods-CRAWLR.debug.xcconfig"; sourceTree = "<group>"; };
 		B028A335A34AC63E74462CBD /* Pods_CRAWLRTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CRAWLRTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4EB044F240860110096B39A /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		E84257C22451812D0071D865 /* SessionManager+CrawlrCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SessionManager+CrawlrCustom.swift"; sourceTree = "<group>"; };
+		E84257C4245181700071D865 /* Encodable+CrawlrCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+CrawlrCustom.swift"; sourceTree = "<group>"; };
+		E874CE9C245145D00026C4A6 /* ApiHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiHelper.swift; sourceTree = "<group>"; };
+		E874CE9E245148B80026C4A6 /* ApiModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiModels.swift; sourceTree = "<group>"; };
+		E874CEA0245151570026C4A6 /* ApiResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponses.swift; sourceTree = "<group>"; };
+		E874CEA2245161B10026C4A6 /* DataResponse+CrawlrCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataResponse+CrawlrCustom.swift"; sourceTree = "<group>"; };
 		E88BF6C323F340A60084435A /* CRAWLR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CRAWLR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E88BF6C623F340A60084435A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E88BF6C823F340A60084435A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +128,19 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E874CE9B245145A30026C4A6 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				E874CE9C245145D00026C4A6 /* ApiHelper.swift */,
+				E874CE9E245148B80026C4A6 /* ApiModels.swift */,
+				E874CEA0245151570026C4A6 /* ApiResponses.swift */,
+				E874CEA2245161B10026C4A6 /* DataResponse+CrawlrCustom.swift */,
+				E84257C22451812D0071D865 /* SessionManager+CrawlrCustom.swift */,
+				E84257C4245181700071D865 /* Encodable+CrawlrCustom.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		E88BF6BA23F340A60084435A = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +166,7 @@
 		E88BF6C523F340A60084435A /* CRAWLR */ = {
 			isa = PBXGroup;
 			children = (
+				E874CE9B245145A30026C4A6 /* API */,
 				E88BF6C623F340A60084435A /* AppDelegate.swift */,
 				E88BF6C823F340A60084435A /* SceneDelegate.swift */,
 				E88BF6CA23F340A60084435A /* ViewController.swift */,
@@ -392,13 +418,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E84257C32451812D0071D865 /* SessionManager+CrawlrCustom.swift in Sources */,
+				E84257C5245181700071D865 /* Encodable+CrawlrCustom.swift in Sources */,
 				E88BF6F923F34D400084435A /* LoginViewController.swift in Sources */,
 				E4EB0450240860110096B39A /* DashboardViewController.swift in Sources */,
 				E88BF6CB23F340A60084435A /* ViewController.swift in Sources */,
+				E874CE9F245148B80026C4A6 /* ApiModels.swift in Sources */,
 				E88BF6C723F340A60084435A /* AppDelegate.swift in Sources */,
+				E874CE9D245145D00026C4A6 /* ApiHelper.swift in Sources */,
 				E88BF6C923F340A60084435A /* SceneDelegate.swift in Sources */,
+				E874CEA1245151570026C4A6 /* ApiResponses.swift in Sources */,
 				5935107C23F613BA001761B8 /* SignUp2ViewController.swift in Sources */,
 				59E7A3CE23F4AC8E00B42135 /* SignUpViewController.swift in Sources */,
+				E874CEA3245161B10026C4A6 /* DataResponse+CrawlrCustom.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
