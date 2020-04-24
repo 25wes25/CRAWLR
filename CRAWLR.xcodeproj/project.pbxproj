@@ -11,6 +11,7 @@
 		5935107C23F613BA001761B8 /* SignUp2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5935107B23F613BA001761B8 /* SignUp2ViewController.swift */; };
 		59AC50A224063906007F0C9C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 59AC50A124063906007F0C9C /* GoogleService-Info.plist */; };
 		59E7A3CE23F4AC8E00B42135 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E7A3CD23F4AC8E00B42135 /* SignUpViewController.swift */; };
+		E48528E4244FFE9F00A61CFC /* DoneDrinkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48528E3244FFE9F00A61CFC /* DoneDrinkingViewController.swift */; };
 		E4EB0450240860110096B39A /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EB044F240860110096B39A /* DashboardViewController.swift */; };
 		E62A9A19F6C5A7087DD749C0 /* Pods_CRAWLRTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B028A335A34AC63E74462CBD /* Pods_CRAWLRTests.framework */; };
 		E88BF6C723F340A60084435A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88BF6C623F340A60084435A /* AppDelegate.swift */; };
@@ -50,6 +51,7 @@
 		59E7A3CD23F4AC8E00B42135 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		91E830F04BEE61E25A352280 /* Pods-CRAWLR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRAWLR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CRAWLR/Pods-CRAWLR.debug.xcconfig"; sourceTree = "<group>"; };
 		B028A335A34AC63E74462CBD /* Pods_CRAWLRTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CRAWLRTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E48528E3244FFE9F00A61CFC /* DoneDrinkingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneDrinkingViewController.swift; sourceTree = "<group>"; };
 		E4EB044F240860110096B39A /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		E88BF6C323F340A60084435A /* CRAWLR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CRAWLR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E88BF6C623F340A60084435A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				E88BF6D423F340A90084435A /* Info.plist */,
 				59AC50A124063906007F0C9C /* GoogleService-Info.plist */,
 				E88BF6F823F34D400084435A /* LoginViewController.swift */,
+				E48528E3244FFE9F00A61CFC /* DoneDrinkingViewController.swift */,
 				59E7A3CD23F4AC8E00B42135 /* SignUpViewController.swift */,
 				5935107B23F613BA001761B8 /* SignUp2ViewController.swift */,
 				E4EB044F240860110096B39A /* DashboardViewController.swift */,
@@ -396,6 +399,7 @@
 				E4EB0450240860110096B39A /* DashboardViewController.swift in Sources */,
 				E88BF6CB23F340A60084435A /* ViewController.swift in Sources */,
 				E88BF6C723F340A60084435A /* AppDelegate.swift in Sources */,
+				E48528E4244FFE9F00A61CFC /* DoneDrinkingViewController.swift in Sources */,
 				E88BF6C923F340A60084435A /* SceneDelegate.swift in Sources */,
 				5935107C23F613BA001761B8 /* SignUp2ViewController.swift in Sources */,
 				59E7A3CE23F4AC8E00B42135 /* SignUpViewController.swift in Sources */,
