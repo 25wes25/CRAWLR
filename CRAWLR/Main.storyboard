@@ -904,12 +904,15 @@
                                                 </constraints>
                                                 <state key="normal" image="Lyft"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ag-Ps-pkB">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ag-Ps-pkB" userLabel="Contact">
                                                 <rect key="frame" x="65" y="499" width="245" height="152"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="152" id="sOh-aq-0b3"/>
                                                 </constraints>
                                                 <state key="normal" image="tempContact"/>
+                                                <connections>
+                                                    <action selector="OnPressContacts:" destination="VS4-cv-UZ1" eventType="touchUpInside" id="6oa-Cz-bcR"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zlt-26-1zS">
                                                 <rect key="frame" x="65" y="65" width="245" height="152"/>
