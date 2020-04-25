@@ -10,6 +10,8 @@
 		1E5AD0C4C3B171AAB7B0AD29 /* Pods_CRAWLR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 543B5F630308AB085FD4B543 /* Pods_CRAWLR.framework */; };
 		5935107C23F613BA001761B8 /* SignUp2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5935107B23F613BA001761B8 /* SignUp2ViewController.swift */; };
 		59E7A3CE23F4AC8E00B42135 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E7A3CD23F4AC8E00B42135 /* SignUpViewController.swift */; };
+		6E2B1FF924549DDF00694437 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2B1FF824549DDF00694437 /* EditProfileViewController.swift */; };
+		6E44B3D1240C3A0B003AEA01 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E44B3D0240C3A0B003AEA01 /* ProfileViewController.swift */; };
 		E4EB0450240860110096B39A /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EB044F240860110096B39A /* DashboardViewController.swift */; };
 		E62A9A19F6C5A7087DD749C0 /* Pods_CRAWLRTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B028A335A34AC63E74462CBD /* Pods_CRAWLRTests.framework */; };
 		E88BF6C723F340A60084435A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88BF6C623F340A60084435A /* AppDelegate.swift */; };
@@ -46,6 +48,8 @@
 		543B5F630308AB085FD4B543 /* Pods_CRAWLR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CRAWLR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5935107B23F613BA001761B8 /* SignUp2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp2ViewController.swift; sourceTree = "<group>"; };
 		59E7A3CD23F4AC8E00B42135 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		6E2B1FF824549DDF00694437 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		6E44B3D0240C3A0B003AEA01 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		91E830F04BEE61E25A352280 /* Pods-CRAWLR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRAWLR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CRAWLR/Pods-CRAWLR.debug.xcconfig"; sourceTree = "<group>"; };
 		B028A335A34AC63E74462CBD /* Pods_CRAWLRTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CRAWLRTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4EB044F240860110096B39A /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +154,8 @@
 				59E7A3CD23F4AC8E00B42135 /* SignUpViewController.swift */,
 				5935107B23F613BA001761B8 /* SignUp2ViewController.swift */,
 				E4EB044F240860110096B39A /* DashboardViewController.swift */,
+				6E44B3D0240C3A0B003AEA01 /* ProfileViewController.swift */,
+				6E2B1FF824549DDF00694437 /* EditProfileViewController.swift */,
 			);
 			path = CRAWLR;
 			sourceTree = "<group>";
@@ -394,7 +400,9 @@
 				E88BF6C723F340A60084435A /* AppDelegate.swift in Sources */,
 				E88BF6C923F340A60084435A /* SceneDelegate.swift in Sources */,
 				5935107C23F613BA001761B8 /* SignUp2ViewController.swift in Sources */,
+				6E44B3D1240C3A0B003AEA01 /* ProfileViewController.swift in Sources */,
 				59E7A3CE23F4AC8E00B42135 /* SignUpViewController.swift in Sources */,
+				6E2B1FF924549DDF00694437 /* EditProfileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

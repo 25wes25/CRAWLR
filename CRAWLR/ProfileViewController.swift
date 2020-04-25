@@ -6,4 +6,14 @@
 //  Copyright © 2020 Wesley Swanson. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class ProfileViewController: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        
+    }
+
+}
