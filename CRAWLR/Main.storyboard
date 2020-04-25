@@ -978,20 +978,20 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="drinkCell" id="2KF-dj-of7" customClass="DrinkCell" customModule="CRAWLR" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="74" width="375" height="58"/>
+                                <rect key="frame" x="0.0" y="74" width="375" height="58.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2KF-dj-of7" id="nvp-90-hww">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="58"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="58.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0G-n9-2eb">
-                                            <rect key="frame" x="64" y="19" width="138" height="20"/>
+                                            <rect key="frame" x="64" y="19" width="138" height="20.5"/>
                                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H48-fw-9lO">
-                                            <rect key="frame" x="282" y="19" width="37" height="20"/>
+                                            <rect key="frame" x="282" y="19" width="37" height="20.5"/>
                                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -1180,7 +1180,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="574"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o2G-j0-XtI" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="762"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="716"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3NZ-Nq-iwM" userLabel="Lyft">
                                                 <rect key="frame" x="65" y="282" width="245" height="152"/>
@@ -1206,33 +1206,20 @@
                                                 </constraints>
                                                 <state key="normal" image="Uber"/>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="contactName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6o9-gn-VKs">
-                                                <rect key="frame" x="65" y="676" width="245" height="21"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="21" id="vVH-K0-GMJ"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="3NZ-Nq-iwM" secondAttribute="trailing" constant="65" id="1iE-LV-7uh"/>
-                                            <constraint firstItem="6o9-gn-VKs" firstAttribute="centerX" secondItem="o2G-j0-XtI" secondAttribute="centerX" id="2NQ-3c-VNe"/>
-                                            <constraint firstAttribute="trailing" secondItem="6o9-gn-VKs" secondAttribute="trailing" constant="65" id="5Nm-bd-EDu"/>
                                             <constraint firstItem="zlt-26-1zS" firstAttribute="leading" secondItem="o2G-j0-XtI" secondAttribute="leading" constant="65" id="96P-cM-g0V"/>
-                                            <constraint firstItem="6o9-gn-VKs" firstAttribute="top" secondItem="6Ag-Ps-pkB" secondAttribute="bottom" constant="25" id="DLw-Ie-V0K"/>
                                             <constraint firstAttribute="trailing" secondItem="6Ag-Ps-pkB" secondAttribute="trailing" constant="65" id="Esh-gD-ZND"/>
                                             <constraint firstItem="3NZ-Nq-iwM" firstAttribute="leading" secondItem="o2G-j0-XtI" secondAttribute="leading" constant="65" id="GMF-T0-BCX"/>
                                             <constraint firstItem="3NZ-Nq-iwM" firstAttribute="top" secondItem="zlt-26-1zS" secondAttribute="bottom" constant="65" id="I3y-fe-jQ6"/>
+                                            <constraint firstAttribute="bottom" secondItem="6Ag-Ps-pkB" secondAttribute="bottom" constant="65" id="Ipt-KD-QCs"/>
                                             <constraint firstItem="3NZ-Nq-iwM" firstAttribute="centerX" secondItem="o2G-j0-XtI" secondAttribute="centerX" id="Lbs-QN-ybq"/>
                                             <constraint firstAttribute="trailing" secondItem="zlt-26-1zS" secondAttribute="trailing" constant="65" id="N87-EU-R0T"/>
                                             <constraint firstItem="6Ag-Ps-pkB" firstAttribute="leading" secondItem="o2G-j0-XtI" secondAttribute="leading" constant="65" id="SOI-oB-7KP"/>
                                             <constraint firstItem="6Ag-Ps-pkB" firstAttribute="top" secondItem="3NZ-Nq-iwM" secondAttribute="bottom" constant="65" id="UPy-tU-RS8"/>
-                                            <constraint firstItem="6o9-gn-VKs" firstAttribute="leading" secondItem="o2G-j0-XtI" secondAttribute="leading" constant="65" id="dxI-M2-WYB"/>
                                             <constraint firstItem="zlt-26-1zS" firstAttribute="top" secondItem="o2G-j0-XtI" secondAttribute="top" constant="65" id="kCs-SQ-Tm2"/>
-                                            <constraint firstAttribute="bottom" secondItem="6o9-gn-VKs" secondAttribute="bottom" constant="65" id="yCg-K4-P9G"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -1257,9 +1244,6 @@
                     <navigationItem key="navigationItem" title="DONE DRINKING" id="kzx-A1-kqY">
                         <barButtonItem key="backBarButtonItem" title=" " id="2TI-Y0-n4c"/>
                     </navigationItem>
-                    <connections>
-                        <outlet property="assignContactName" destination="6o9-gn-VKs" id="jLI-YL-qCU"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MnL-gp-iTV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
