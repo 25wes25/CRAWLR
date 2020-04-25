@@ -57,10 +57,8 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func onPressLogin(_ sender: Any) {
-//        let username = usernameTextField.text!
-//        let password = passwordTextField.text!
-        let username = "rb@gmail.com"
-        let password = "123456"
+        let username = usernameTextField.text!
+        let password = passwordTextField.text!
         
         
         if(username == "" || password == ""){
