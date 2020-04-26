@@ -116,30 +116,32 @@ class DetailedBusinessInfoViewController: UIViewController {
            distance.text = String(format: "%.2f", distanceMiles) + " miles away"
         }
         
-        if let rating = business.rating {
-            if rating == 0{
+        let rating = business.rating
+        switch rating {
+            case 0:
                 ratingImage.image = UIImage(named: "yelp0stars")
-            } else if rating == 1 {
+            case 1:
                 ratingImage.image = UIImage(named: "yelp1star")
-            } else if rating == 1.5 {
+            case 1.5:
                 ratingImage.image = UIImage(named: "yelp1.5stars")
-            } else if rating == 2 {
+            case 2:
                 ratingImage.image = UIImage(named: "yelp2stars")
-            } else if rating == 2.5 {
+            case 2.5:
                 ratingImage.image = UIImage(named: "yelp2.5stars")
-            } else if rating == 3 {
+            case 3:
                 ratingImage.image = UIImage(named: "yelp3stars")
-            } else if rating == 3.5 {
+            case 3.5:
                 ratingImage.image = UIImage(named: "yelp3.5stars")
-            } else if rating == 4 {
+            case 4:
                 ratingImage.image = UIImage(named: "yelp4stars")
-            } else if rating == 4.5 {
+            case 4.5:
                 ratingImage.image = UIImage(named: "yelp4.5stars")
-            } else if rating == 5 {
+            case 5:
                 ratingImage.image = UIImage(named: "yelp5stars")
-            }
+            default:
+                break
         }
-               
+        
         if let nameInfo = business.name {
             name.text = nameInfo
         }

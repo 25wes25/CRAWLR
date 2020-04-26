@@ -17,7 +17,7 @@ extension DataResponse where Value == String {
             do {
                 translated = try JSONDecoder().decode(T.self, from: data)
             } catch {
-                print("fail")
+                print("translation failed")
             }
         }
         return translated

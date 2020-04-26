@@ -158,6 +158,7 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
                 self.businesses = businesses
                 self.realBusinesses = businesses
                 self.collectionView.reloadData()
+                self.collectionView.isHidden = false
             }
         }
         
@@ -166,6 +167,9 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
                 if let searchText = self.searchText{
                     if !searchText.isEmpty{
                         ApiHelper.instance.getBusinesses(text: searchText, latitude: latitude, longitude: longitude, categories: self.category, callback: onDidRecieveBusinesses)
+                        
+                    } else {
+                        self.collectionView.isHidden = true
                     }
                 }
             }
@@ -193,19 +197,16 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
         }
         
         searchCell.name.text = self.businesses?[indexPath.item].name
-        searchCell.name.isHidden = false
 
         if let distanceMeters = self.businesses?[indexPath.item].distance {
             let distanceMiles = distanceMeters * 0.000621371
             searchCell.distance.text = String(format: "%.2f", distanceMiles) + " miles away"
-            searchCell.distance.isHidden = false
         }
         
         let address = self.businesses?[indexPath.item].location
         let addressString1 = address?.address1 ?? ""
         let addressString2 = address?.city ?? ""
         searchCell.address.text = addressString1 + ", " + addressString2
-        searchCell.address.isHidden = false
         
         return searchCell
     }
@@ -223,14 +224,18 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
     @IBAction func whenBarButtonPressed(_ sender: Any) {
         self.category = "bars"
         foodLabel.textColor = UIColor.white
-        barsLabel.textColor = UIColor.systemTeal
+        barsLabel.textColor = UIColor(red: 0, green: 196, blue: 255, alpha: 1)
+        foodButton.setImage(UIImage(named: "friesIcon"), for: .normal)
+        barsButton.setImage(UIImage(named: "barsIconBlue"), for: .normal)
        
     }
     
     @IBAction func whenFoodButtonPressed(_ sender: Any) {
         self.category = "food"
         barsLabel.textColor = UIColor.white
-        foodLabel.textColor = UIColor.systemTeal
+        foodLabel.textColor = UIColor(red: 0, green: 196, blue: 255, alpha: 1)
+        barsButton.setImage(UIImage(named: "barsIcon"), for: .normal)
+        foodButton.setImage(UIImage(named: "friesIconBlue"), for: .normal)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -241,16 +246,6 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
             }
         }
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 

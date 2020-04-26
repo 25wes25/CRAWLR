@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1E5AD0C4C3B171AAB7B0AD29 /* Pods_CRAWLR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 543B5F630308AB085FD4B543 /* Pods_CRAWLR.framework */; };
 		59266FA624526669003640B2 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59266FA524526669003640B2 /* SearchCell.swift */; };
-		59266FA824536603003640B2 /* CustomNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59266FA724536603003640B2 /* CustomNavController.swift */; };
 		59266FAA245375AB003640B2 /* DetailedBusinessInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59266FA9245375AA003640B2 /* DetailedBusinessInfoViewController.swift */; };
 		5935107C23F613BA001761B8 /* SignUp2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5935107B23F613BA001761B8 /* SignUp2ViewController.swift */; };
 		59A9F42C244D22D100FC10C4 /* EstimatedBACViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9F42B244D22D100FC10C4 /* EstimatedBACViewController.swift */; };
@@ -60,7 +59,6 @@
 		4129C0C8FCB5B23D790983BF /* Pods-CRAWLRTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRAWLRTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CRAWLRTests/Pods-CRAWLRTests.debug.xcconfig"; sourceTree = "<group>"; };
 		543B5F630308AB085FD4B543 /* Pods_CRAWLR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CRAWLR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		59266FA524526669003640B2 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
-		59266FA724536603003640B2 /* CustomNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavController.swift; sourceTree = "<group>"; };
 		59266FA9245375AA003640B2 /* DetailedBusinessInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedBusinessInfoViewController.swift; sourceTree = "<group>"; };
 		5935107B23F613BA001761B8 /* SignUp2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp2ViewController.swift; sourceTree = "<group>"; };
 		59A9F42B244D22D100FC10C4 /* EstimatedBACViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimatedBACViewController.swift; sourceTree = "<group>"; };
@@ -201,7 +199,6 @@
 				59A9F42F244F77E900FC10C4 /* DayCell.swift */,
 				59A9F431244F956E00FC10C4 /* DrinkCell.swift */,
 				59266FA524526669003640B2 /* SearchCell.swift */,
-				59266FA724536603003640B2 /* CustomNavController.swift */,
 				59266FA9245375AA003640B2 /* DetailedBusinessInfoViewController.swift */,
 			);
 			path = CRAWLR;
@@ -448,7 +445,6 @@
 				59A9F432244F956E00FC10C4 /* DrinkCell.swift in Sources */,
 				59266FA624526669003640B2 /* SearchCell.swift in Sources */,
 				59266FAA245375AB003640B2 /* DetailedBusinessInfoViewController.swift in Sources */,
-				59266FA824536603003640B2 /* CustomNavController.swift in Sources */,
 				E84257C32451812D0071D865 /* SessionManager+CrawlrCustom.swift in Sources */,
 				E84257C5245181700071D865 /* Encodable+CrawlrCustom.swift in Sources */,
 				E88BF6F923F34D400084435A /* LoginViewController.swift in Sources */,

@@ -50,12 +50,8 @@ class ApiHelper {
     
     func getBusiness(id: String, callback: @escaping (Business?) -> Void) {
         let url = URL(string: ApiHelper.yelpBusinessesUrl + "/\(id)")!
-
-        let parameters: [String: Any] = [
-            "id": id
-        ]
         
-        Alamofire.SessionManager.default.request(url, method: .get, parameters: parameters, headers: self.yelpAuthHeaders).responseString { response in
+        Alamofire.SessionManager.default.request(url, method: .get, parameters: nil, headers: self.yelpAuthHeaders).responseString { response in
             if let businessResponse = response.translate(to: Business.self) {
                 callback(businessResponse)
             } else {
