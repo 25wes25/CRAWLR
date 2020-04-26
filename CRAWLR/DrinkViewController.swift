@@ -41,6 +41,11 @@ class DrinkViewController: UIViewController {
             if let amount = Int(amountText) {
                 if amount > 1 {
                     self.amountLabel.text = String(amount - 1)
+                    if amount - 1 == 1 {
+                        if let drinkType = self.drinkType {
+                            self.drinkTypeLabel.text = drinkType
+                        }
+                    }
                 }
             }
         }
@@ -51,6 +56,9 @@ class DrinkViewController: UIViewController {
             if let amount = Int(amountText) {
                 if amount < 10 {
                     self.amountLabel.text = String(amount + 1)
+                    if let drinkType = self.drinkType {
+                        self.drinkTypeLabel.text = drinkType + "S"
+                    }
                 }
             }
         }

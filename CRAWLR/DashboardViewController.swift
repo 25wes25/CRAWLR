@@ -127,13 +127,14 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
         if segue.destination is DrinkViewController
         {
             let vc = segue.destination as? DrinkViewController
+            vc?.title = self.selectedDrink
             vc?.drink = self.selectedDrink
             if self.selectedType == "shots" {
                 vc?.drinkType = "SHOT"
             } else if self.selectedType == "cocktails" {
-                vc?.drinkType = "GLASS"
+                vc?.drinkType = "COCKTAIL"
             } else if self.selectedType == "other" {
-                vc?.drinkType = "BOTTLE"
+                vc?.drinkType = "BEVERAGE"
             }
         }
     }
