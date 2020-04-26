@@ -6,6 +6,8 @@ target 'CRAWLR' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
   pod 'Alamofire', '~> 4.8'
+  pod 'UberRides', '~> 0.9'
+  pod 'LyftSDK'
 end
 
 target 'CRAWLRTests' do
@@ -16,4 +18,6 @@ target 'CRAWLRTests' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
   pod 'Alamofire', '~> 4.8'
+  pod 'UberRides', '~> 0.9'
+  pod 'LyftSDK'
 end

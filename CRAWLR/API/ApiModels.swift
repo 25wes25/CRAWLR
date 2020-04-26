@@ -33,6 +33,19 @@ struct Location: Codable {
     var display_address: [String]?
 }
 
+struct HoursOpen: Codable {
+    var is_overnight: Bool?
+    var start: String?
+    var end: String?
+    var day: Int
+}
+
+struct BusinessHours: Codable {
+    var open: [HoursOpen]?
+    var hours_type: String?
+    var is_open_now: Bool?
+}
+
 struct Business: Codable {
     var id: String?
     var alias: String?
@@ -49,4 +62,6 @@ struct Business: Codable {
     var phone: String?
     var display_phone: String?
     var distance: Double?
+    var hours: [BusinessHours]?
+    var photos: [String]?
 }
