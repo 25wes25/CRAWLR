@@ -245,10 +245,10 @@
             </objects>
             <point key="canvasLocation" x="138.40000000000001" y="115.59220389805098"/>
         </scene>
-        <!--View Controller-->
+        <!--Forgot Password View Controller-->
         <scene sceneID="rJj-RP-kgp">
             <objects>
-                <viewController id="aQw-go-yBz" sceneMemberID="viewController">
+                <viewController id="aQw-go-yBz" customClass="ForgotPasswordViewController" customModule="CRAWLR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B8o-4F-5c7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -314,6 +314,7 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="onPressContinue:" destination="noc-2x-G5b" eventType="touchUpInside" id="xqB-Yh-fvH"/>
+                                                    <action selector="sendResetInfoPressed:" destination="aQw-go-yBz" eventType="touchUpInside" id="Ba9-pV-NE5"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -355,6 +356,11 @@
                         <viewLayoutGuide key="safeArea" id="n1L-5K-NVr"/>
                     </view>
                     <navigationItem key="navigationItem" id="he2-2g-NnD"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="rJl-mc-BDD" id="8z1-0H-h03"/>
+                        <outlet property="scrollView" destination="HdB-Ex-0XK" id="k0b-3M-cLj"/>
+                        <outlet property="sendResetInfoButton" destination="i1z-zs-Rb3" id="ndy-Pe-OrB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3GY-pg-pi9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1090,20 +1096,20 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="drinkCell" id="2KF-dj-of7" customClass="DrinkCell" customModule="CRAWLR" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="74" width="375" height="58"/>
+                                <rect key="frame" x="0.0" y="74" width="375" height="58.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2KF-dj-of7" id="nvp-90-hww">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="58"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="58.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0G-n9-2eb">
-                                            <rect key="frame" x="64" y="19" width="138" height="20"/>
+                                            <rect key="frame" x="64" y="19" width="138" height="20.5"/>
                                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H48-fw-9lO">
-                                            <rect key="frame" x="282" y="19" width="37" height="20"/>
+                                            <rect key="frame" x="282" y="19" width="37" height="20.5"/>
                                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
