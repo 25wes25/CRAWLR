@@ -31,6 +31,9 @@ class DetailedBusinessInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
         let onDidRecieveBusiness: (Business?) -> Void = { business in
             if let business = business{
                 self.business = business
@@ -42,6 +45,15 @@ class DetailedBusinessInfoViewController: UIViewController {
             ApiHelper.instance.getBusiness(id: businessID, callback: onDidRecieveBusiness)
         }
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.barTintColor = UIColor.clear
+        self.navigationController?.navigationBar.backgroundColor = UIColor.clear
     }
     
     func updateViews(business: Business) {
