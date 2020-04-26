@@ -224,16 +224,15 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
     @IBAction func whenBarButtonPressed(_ sender: Any) {
         self.category = "bars"
         foodLabel.textColor = UIColor.white
-        barsLabel.textColor = UIColor(red: 0, green: 196, blue: 255, alpha: 1)
+        barsLabel.textColor = #colorLiteral(red: 0, green: 0.77, blue: 1, alpha: 1)
         foodButton.setImage(UIImage(named: "friesIcon"), for: .normal)
         barsButton.setImage(UIImage(named: "barsIconBlue"), for: .normal)
-       
     }
     
     @IBAction func whenFoodButtonPressed(_ sender: Any) {
         self.category = "food"
         barsLabel.textColor = UIColor.white
-        foodLabel.textColor = UIColor(red: 0, green: 196, blue: 255, alpha: 1)
+        foodLabel.textColor = #colorLiteral(red: 0, green: 0.77, blue: 1, alpha: 1)
         barsButton.setImage(UIImage(named: "barsIcon"), for: .normal)
         foodButton.setImage(UIImage(named: "friesIconBlue"), for: .normal)
     }

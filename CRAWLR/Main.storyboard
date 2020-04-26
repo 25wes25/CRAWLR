@@ -751,7 +751,7 @@
                                                 <rect key="frame" x="51" y="62" width="31" height="16"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
-                                                <color key="textColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" red="0.0" green="0.76862745098039209" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X7V-aH-qBm">
@@ -759,13 +759,8 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                                                 <state key="normal" image="barsIconBlue">
-                                                    <color key="titleShadowColor" red="0.0" green="0.76862745098039209" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" red="0.0" green="0.76917082069999998" blue="0.99853581189999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="whenBarButtonPressed:" destination="Rs5-5t-Uxu" eventType="touchUpInside" id="z5v-Mo-kcu"/>
                                                 </connections>
@@ -829,10 +824,11 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zva-So-yJx" userLabel="businessImageView">
-                                                    <rect key="frame" x="0.0" y="8" width="72" height="72"/>
+                                                    <rect key="frame" x="36" y="8" width="72" height="72"/>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="72" id="E5C-Nk-KYl"/>
+                                                        <constraint firstAttribute="height" constant="72" id="NBK-dv-KRz"/>
+                                                        <constraint firstAttribute="width" constant="72" id="uNf-Z7-bpj"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -843,67 +839,54 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z9l-rU-kzK">
-                                                    <rect key="frame" x="80" y="0.0" width="279" height="88"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q3d-V1-dCK">
-                                                            <rect key="frame" x="8" y="8" width="263" height="29"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="29" id="0Fd-DB-R8v"/>
-                                                                <constraint firstAttribute="width" constant="142" id="CE9-zM-FKb"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="16"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance Away" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCg-Sk-Hgz">
-                                                            <rect key="frame" x="8" y="40" width="271" height="17"/>
-                                                            <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="14"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2D0-RE-5De">
-                                                            <rect key="frame" x="8" y="61" width="271" height="19"/>
-                                                            <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="14"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="2D0-RE-5De" secondAttribute="bottom" constant="8" id="ITE-lT-a6d"/>
-                                                        <constraint firstAttribute="trailing" secondItem="aCg-Sk-Hgz" secondAttribute="trailing" id="QcY-O7-R6G"/>
-                                                        <constraint firstItem="q3d-V1-dCK" firstAttribute="leading" secondItem="Z9l-rU-kzK" secondAttribute="leading" constant="8" id="Sal-j0-ViX"/>
-                                                        <constraint firstItem="2D0-RE-5De" firstAttribute="leading" secondItem="Z9l-rU-kzK" secondAttribute="leading" constant="8" id="d8A-qa-N98"/>
-                                                        <constraint firstAttribute="trailing" secondItem="2D0-RE-5De" secondAttribute="trailing" id="fnS-zu-5th"/>
-                                                        <constraint firstItem="2D0-RE-5De" firstAttribute="top" secondItem="aCg-Sk-Hgz" secondAttribute="bottom" constant="4" id="hhS-gH-tbW"/>
-                                                        <constraint firstItem="q3d-V1-dCK" firstAttribute="top" secondItem="Z9l-rU-kzK" secondAttribute="top" constant="8" id="ikM-Tp-FFe"/>
-                                                        <constraint firstItem="aCg-Sk-Hgz" firstAttribute="leading" secondItem="Z9l-rU-kzK" secondAttribute="leading" constant="8" id="oLJ-Ip-s71"/>
-                                                        <constraint firstItem="aCg-Sk-Hgz" firstAttribute="top" secondItem="Z9l-rU-kzK" secondAttribute="top" constant="40" id="qBI-VN-J2b"/>
-                                                        <constraint firstAttribute="trailing" secondItem="q3d-V1-dCK" secondAttribute="trailing" constant="8" id="qqp-kP-HeW"/>
-                                                    </constraints>
-                                                </view>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="TaJ-7d-Svf">
-                                                    <rect key="frame" x="359" y="38" width="8" height="12.5"/>
+                                                    <rect key="frame" x="359" y="38" width="12.5" height="16.5"/>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="16" id="nXx-Lu-cWL"/>
-                                                        <constraint firstAttribute="width" constant="8" id="tVi-td-hdo"/>
-                                                    </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance Away" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCg-Sk-Hgz">
+                                                    <rect key="frame" x="116" y="37" width="235" height="19"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="235" id="s4n-Fx-7sD"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="14"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2D0-RE-5De">
+                                                    <rect key="frame" x="116" y="61" width="235" height="19"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="235" id="cQi-zO-Mdx"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="14"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q3d-V1-dCK">
+                                                    <rect key="frame" x="116" y="8" width="235" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="235" id="feY-89-CUd"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="16"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstItem="zva-So-yJx" firstAttribute="top" secondItem="C4u-sV-ksV" secondAttribute="top" constant="8" id="0ay-kB-TfT"/>
-                                                <constraint firstAttribute="bottom" secondItem="zva-So-yJx" secondAttribute="bottom" constant="8" id="2XA-Ow-VgD"/>
-                                                <constraint firstAttribute="bottom" secondItem="TaJ-7d-Svf" secondAttribute="bottom" constant="36" id="62O-73-36j"/>
-                                                <constraint firstItem="Z9l-rU-kzK" firstAttribute="top" secondItem="C4u-sV-ksV" secondAttribute="top" id="6vD-Gq-7ZN"/>
-                                                <constraint firstAttribute="bottom" secondItem="Z9l-rU-kzK" secondAttribute="bottom" id="9O7-9S-rLd"/>
-                                                <constraint firstAttribute="trailing" secondItem="Z9l-rU-kzK" secondAttribute="trailing" constant="16" id="Tuw-lM-dd8"/>
-                                                <constraint firstItem="Z9l-rU-kzK" firstAttribute="leading" secondItem="zva-So-yJx" secondAttribute="trailing" constant="8" id="XqR-N6-VwM"/>
-                                                <constraint firstItem="TaJ-7d-Svf" firstAttribute="leading" secondItem="Z9l-rU-kzK" secondAttribute="trailing" id="cxs-HQ-3bv"/>
-                                                <constraint firstItem="zva-So-yJx" firstAttribute="leading" secondItem="C4u-sV-ksV" secondAttribute="leading" id="wsh-Nt-dey"/>
-                                                <constraint firstItem="TaJ-7d-Svf" firstAttribute="top" secondItem="C4u-sV-ksV" secondAttribute="top" constant="36" id="y5g-aB-IjC"/>
+                                                <constraint firstItem="q3d-V1-dCK" firstAttribute="top" secondItem="C4u-sV-ksV" secondAttribute="top" constant="8" id="2Fo-6z-3gP"/>
+                                                <constraint firstItem="2D0-RE-5De" firstAttribute="top" secondItem="aCg-Sk-Hgz" secondAttribute="bottom" constant="5" id="8Tp-7k-Ef5"/>
+                                                <constraint firstItem="TaJ-7d-Svf" firstAttribute="top" secondItem="C4u-sV-ksV" secondAttribute="top" constant="36" id="BfN-2L-ue4"/>
+                                                <constraint firstItem="2D0-RE-5De" firstAttribute="leading" secondItem="zva-So-yJx" secondAttribute="trailing" constant="8" id="C3w-PH-nEb"/>
+                                                <constraint firstItem="TaJ-7d-Svf" firstAttribute="leading" secondItem="aCg-Sk-Hgz" secondAttribute="trailing" constant="8" id="EuB-ll-2Yg"/>
+                                                <constraint firstItem="aCg-Sk-Hgz" firstAttribute="top" secondItem="q3d-V1-dCK" secondAttribute="bottom" constant="8" id="IWu-rv-HQE"/>
+                                                <constraint firstAttribute="bottom" secondItem="2D0-RE-5De" secondAttribute="bottom" constant="8" id="KpJ-3C-wEC"/>
+                                                <constraint firstAttribute="trailing" secondItem="q3d-V1-dCK" secondAttribute="trailing" constant="24" id="LAt-GG-6Vt"/>
+                                                <constraint firstItem="zva-So-yJx" firstAttribute="leading" secondItem="C4u-sV-ksV" secondAttribute="leading" constant="36" id="QjZ-Hd-dfG"/>
+                                                <constraint firstAttribute="trailing" secondItem="2D0-RE-5De" secondAttribute="trailing" constant="24" id="Y65-4B-Q7u"/>
+                                                <constraint firstAttribute="bottom" secondItem="zva-So-yJx" secondAttribute="bottom" constant="8" id="ax4-9s-eYo"/>
+                                                <constraint firstItem="aCg-Sk-Hgz" firstAttribute="leading" secondItem="zva-So-yJx" secondAttribute="trailing" constant="8" id="jev-2o-TTK"/>
+                                                <constraint firstItem="q3d-V1-dCK" firstAttribute="leading" secondItem="zva-So-yJx" secondAttribute="trailing" constant="8" id="mUx-Zk-WUW"/>
+                                                <constraint firstItem="zva-So-yJx" firstAttribute="top" secondItem="C4u-sV-ksV" secondAttribute="top" constant="8" id="mgV-dj-AG5"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
