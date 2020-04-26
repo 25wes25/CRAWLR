@@ -10,6 +10,7 @@
 		1E5AD0C4C3B171AAB7B0AD29 /* Pods_CRAWLR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 543B5F630308AB085FD4B543 /* Pods_CRAWLR.framework */; };
 		59266FA624526669003640B2 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59266FA524526669003640B2 /* SearchCell.swift */; };
 		59266FAA245375AB003640B2 /* DetailedBusinessInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59266FA9245375AA003640B2 /* DetailedBusinessInfoViewController.swift */; };
+		592E6F4824551E06000F51E5 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592E6F4724551E04000F51E5 /* ForgotPasswordViewController.swift */; };
 		5935107C23F613BA001761B8 /* SignUp2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5935107B23F613BA001761B8 /* SignUp2ViewController.swift */; };
 		59A9F42C244D22D100FC10C4 /* EstimatedBACViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9F42B244D22D100FC10C4 /* EstimatedBACViewController.swift */; };
 		59A9F42E244F711900FC10C4 /* DrinkingHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9F42D244F711900FC10C4 /* DrinkingHistoryViewController.swift */; };
@@ -61,6 +62,7 @@
 		543B5F630308AB085FD4B543 /* Pods_CRAWLR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CRAWLR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		59266FA524526669003640B2 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		59266FA9245375AA003640B2 /* DetailedBusinessInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedBusinessInfoViewController.swift; sourceTree = "<group>"; };
+		592E6F4724551E04000F51E5 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		5935107B23F613BA001761B8 /* SignUp2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp2ViewController.swift; sourceTree = "<group>"; };
 		59A9F42B244D22D100FC10C4 /* EstimatedBACViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimatedBACViewController.swift; sourceTree = "<group>"; };
 		59A9F42D244F711900FC10C4 /* DrinkingHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkingHistoryViewController.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				59A9F431244F956E00FC10C4 /* DrinkCell.swift */,
 				59266FA524526669003640B2 /* SearchCell.swift */,
 				59266FA9245375AA003640B2 /* DetailedBusinessInfoViewController.swift */,
+				592E6F4724551E04000F51E5 /* ForgotPasswordViewController.swift */,
 			);
 			path = CRAWLR;
 			sourceTree = "<group>";
@@ -460,6 +463,7 @@
 				E874CE9D245145D00026C4A6 /* ApiHelper.swift in Sources */,
 				E88BF6C923F340A60084435A /* SceneDelegate.swift in Sources */,
 				E874CEA1245151570026C4A6 /* ApiResponses.swift in Sources */,
+				592E6F4824551E06000F51E5 /* ForgotPasswordViewController.swift in Sources */,
 				5935107C23F613BA001761B8 /* SignUp2ViewController.swift in Sources */,
 				59E7A3CE23F4AC8E00B42135 /* SignUpViewController.swift in Sources */,
 				E874CEA3245161B10026C4A6 /* DataResponse+CrawlrCustom.swift in Sources */,
