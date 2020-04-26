@@ -13,3 +13,4 @@ struct BusinessesResponse: Codable {
     var total: Int?
     var region: Region?
 }
+

@@ -60,6 +60,7 @@ class LoginViewController: UIViewController {
         let username = usernameTextField.text!
         let password = passwordTextField.text!
         
+        
         if(username == "" || password == ""){
             let alertController = UIAlertController.init(title: "Error", message: "Please enter an email and password", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
