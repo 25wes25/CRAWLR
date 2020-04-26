@@ -47,4 +47,16 @@ class ApiHelper {
             }
         }
     }
+    
+    func getBusiness(id: String, callback: @escaping (Business?) -> Void) {
+        let url = URL(string: ApiHelper.yelpBusinessesUrl + "/\(id)")!
+        
+        Alamofire.SessionManager.default.request(url, method: .get, parameters: nil, headers: self.yelpAuthHeaders).responseString { response in
+            if let businessResponse = response.translate(to: Business.self) {
+                callback(businessResponse)
+            } else {
+                callback(nil)
+            }
+        }
+    }
 }
