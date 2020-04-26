@@ -57,8 +57,10 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func onPressLogin(_ sender: Any) {
-        let username = usernameTextField.text!
-        let password = passwordTextField.text!
+        var username = usernameTextField.text!
+        var password = passwordTextField.text!
+        username = "rb@gmail.com"
+        password = "123456"
         
         if(username == "" || password == ""){
             let alertController = UIAlertController.init(title: "Error", message: "Please enter an email and password", preferredStyle: .alert)

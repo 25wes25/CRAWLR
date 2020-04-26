@@ -32,6 +32,8 @@
 		E88BF6E923F340AA0084435A /* CRAWLRUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88BF6E823F340AA0084435A /* CRAWLRUITests.swift */; };
 		E88BF6F723F348A40084435A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E88BF6F623F348A40084435A /* Main.storyboard */; };
 		E88BF6F923F34D400084435A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88BF6F823F34D400084435A /* LoginViewController.swift */; };
+		E896375B2454FBF6004F4AA8 /* DashboardCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E896375A2454FBF6004F4AA8 /* DashboardCollectionCell.swift */; };
+		E896375D24554973004F4AA8 /* DrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E896375C24554973004F4AA8 /* DrinkViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,8 @@
 		E88BF6EA23F340AA0084435A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E88BF6F623F348A40084435A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E88BF6F823F34D400084435A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E896375A2454FBF6004F4AA8 /* DashboardCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCollectionCell.swift; sourceTree = "<group>"; };
+		E896375C24554973004F4AA8 /* DrinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkViewController.swift; sourceTree = "<group>"; };
 		ED1A7A48D626A393F7F196E5 /* Pods-CRAWLRTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRAWLRTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CRAWLRTests/Pods-CRAWLRTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -178,6 +182,7 @@
 				E88BF6C623F340A60084435A /* AppDelegate.swift */,
 				E88BF6C823F340A60084435A /* SceneDelegate.swift */,
 				E88BF6CA23F340A60084435A /* ViewController.swift */,
+				E896375C24554973004F4AA8 /* DrinkViewController.swift */,
 				E88BF6F623F348A40084435A /* Main.storyboard */,
 				E88BF6CF23F340A90084435A /* Assets.xcassets */,
 				E88BF6D123F340A90084435A /* LaunchScreen.storyboard */,
@@ -187,6 +192,7 @@
 				59E7A3CD23F4AC8E00B42135 /* SignUpViewController.swift */,
 				5935107B23F613BA001761B8 /* SignUp2ViewController.swift */,
 				E4EB044F240860110096B39A /* DashboardViewController.swift */,
+				E896375A2454FBF6004F4AA8 /* DashboardCollectionCell.swift */,
 				59A9F42B244D22D100FC10C4 /* EstimatedBACViewController.swift */,
 				59A9F42D244F711900FC10C4 /* DrinkingHistoryViewController.swift */,
 				59A9F42F244F77E900FC10C4 /* DayCell.swift */,
@@ -432,6 +438,8 @@
 			files = (
 				59A9F42E244F711900FC10C4 /* DrinkingHistoryViewController.swift in Sources */,
 				59A9F42C244D22D100FC10C4 /* EstimatedBACViewController.swift in Sources */,
+				E896375B2454FBF6004F4AA8 /* DashboardCollectionCell.swift in Sources */,
+				E896375D24554973004F4AA8 /* DrinkViewController.swift in Sources */,
 				59A9F430244F77E900FC10C4 /* DayCell.swift in Sources */,
 				59A9F432244F956E00FC10C4 /* DrinkCell.swift in Sources */,
 				E84257C32451812D0071D865 /* SessionManager+CrawlrCustom.swift in Sources */,
