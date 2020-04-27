@@ -1,23 +1,23 @@
 {
   "images" : [
     {
-      "filename" : "bars.png",
+      "scale" : "1x",
       "idiom" : "universal",
-      "scale" : "1x"
+      "filename" : "barsIcon.png"
     },
     {
-      "filename" : "bars@2x.png",
+      "filename" : "barsIcon@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "bars@3x.png",
-      "idiom" : "universal",
-      "scale" : "3x"
+      "filename" : "barsIcon@3x.png",
+      "scale" : "3x",
+      "idiom" : "universal"
     }
   ],
   "info" : {
-    "author" : "xcode",
-    "version" : 1
+    "version" : 1,
+    "author" : "xcode"
   }
 }
