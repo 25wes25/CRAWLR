@@ -179,6 +179,9 @@ class SignUp2ViewController: UIViewController {
                 let searchNavigationController = viewControllers[1] as? UINavigationController
                 let searchViewController = searchNavigationController?.viewControllers[0] as? SearchViewController
                 searchViewController?.user = self.user
+                let profileNavigationController = viewControllers[2] as? UINavigationController
+                let profileViewController = profileNavigationController?.viewControllers[0] as? ProfileViewController
+                profileViewController?.user = self.user
             }
         }
     }
