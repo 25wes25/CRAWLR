@@ -25,6 +25,7 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
     
     var selectedDrink: String?
     var selectedType = "shots"
+    var user: User?
     
     var shots = ["TEQUILA", "WHISKEY", "VODKA", "GIN", "RUM", "MOONSHINE"];
     var cocktails = ["MARGARITA", "COSMO", "SCREWDRIVER", "MIMOSA", "WINE", "CHAMPAIGN"];

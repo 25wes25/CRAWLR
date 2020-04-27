@@ -126,8 +126,8 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
     var longitude: Double?
     var latitude: Double?
     var searchText: String?
+    var user: User?
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.collectionView.dataSource = self
