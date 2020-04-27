@@ -35,9 +35,6 @@ override func viewDidLoad() {
         func contactPicker(_ picker: CNContactPickerViewController, didSelect contact: CNContact) {
             // You can fetch selected name and number in the following way
 
-            // user name
-            let userName:String = contact.givenName
-
             // user phone number
             let userPhoneNumbers:[CNLabeledValue<CNPhoneNumber>] = contact.phoneNumbers
             let firstPhoneNumber:CNPhoneNumber = userPhoneNumbers[0].value

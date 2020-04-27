@@ -40,10 +40,7 @@ class ProfileViewController: UIViewController {
         }
     }
     
-    @IBAction func EditProfile(_ sender: UIButton) {
-        performSegue(withIdentifier: "Edit", sender: self)
-        
-    }
+    var user: User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +51,11 @@ class ProfileViewController: UIViewController {
         ageLabel.text = "22"
         heightLabel.text = "6'2''"
 
+    }
+    
+    @IBAction func EditProfile(_ sender: UIButton) {
+        performSegue(withIdentifier: "Edit", sender: self)
+        
     }
     
     override func prepare( for segue: UIStoryboardSegue, sender: Any?){

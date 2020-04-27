@@ -8,6 +8,41 @@
 
 import Foundation
 
+struct User: Codable {
+    var _id: String?
+    var email: String?
+    var username: String?
+    var firstName: String?
+    var lastName: String?
+    var phone: String?
+    var age: Double?
+    var gender: String?
+    var weight: Double?
+    var height: String?
+    var settingsId: String?
+    var bac: Double?
+}
+
+struct Settings: Codable {
+    var _id: String?
+    var locationSharing: Bool?
+}
+
+struct Drink: Codable {
+    var _id: String?
+    var userId: String?
+    var beverage: String?
+    var date: String?
+    var amount: Double?
+}
+
+struct Beverage: Codable {
+    var _id: String?
+    var name: String?
+    var category: String?
+    var abv: Double?
+}
+
 struct Center: Codable {
     var longitude: Double?
     var latitude: Double?
@@ -33,6 +68,19 @@ struct Location: Codable {
     var display_address: [String]?
 }
 
+struct HoursOpen: Codable {
+    var is_overnight: Bool?
+    var start: String?
+    var end: String?
+    var day: Int
+}
+
+struct BusinessHours: Codable {
+    var open: [HoursOpen]?
+    var hours_type: String?
+    var is_open_now: Bool?
+}
+
 struct Business: Codable {
     var id: String?
     var alias: String?
@@ -49,4 +97,6 @@ struct Business: Codable {
     var phone: String?
     var display_phone: String?
     var distance: Double?
+    var hours: [BusinessHours]?
+    var photos: [String]?
 }

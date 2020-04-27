@@ -18,7 +18,9 @@ class SignUpViewController: UIViewController{
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var passwordConfirmTextField: UITextField!
     @IBOutlet weak var continueButton: UIButton!
+    
     var emailValidation = false
+    var user = User()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -126,6 +128,10 @@ class SignUpViewController: UIViewController{
             self.present(alertController, animated: true, completion: nil)
         }
         else{
+            self.user.firstName = self.firstNameTextField.text
+            self.user.lastName = self.lastNameTextField.text
+            self.user.email = self.emailTextField.text
+            self.user.phone = self.phoneTextField.text
             self.performSegue(withIdentifier: "SignUpToSignUp2", sender: self)
         }
     }
@@ -135,6 +141,7 @@ class SignUpViewController: UIViewController{
             let vc = segue.destination as? SignUp2ViewController
             vc?.email = self.emailTextField.text!
             vc?.password = self.passwordTextField.text!
+            vc?.user = self.user
         }
     }
 }
