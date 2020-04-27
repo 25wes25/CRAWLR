@@ -49,11 +49,19 @@ class DetailedBusinessInfoViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.navigationBar.barTintColor = UIColor.clear
-        self.navigationController?.navigationBar.backgroundColor = UIColor.clear
+
+        // Make the navigation bar background clear
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.isTranslucent = true
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        // Restore the navigation bar to default
+        navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
+        navigationController?.navigationBar.shadowImage = nil
     }
     
     func updateViews(business: Business) {
@@ -81,7 +89,6 @@ class DetailedBusinessInfoViewController: UIViewController {
             status.isHidden = true
         }
               
-        //  TO-DO: figure out hours
         let date = Date()
         let calendar = Calendar.current
         let components = calendar.dateComponents([.weekday], from: date)
