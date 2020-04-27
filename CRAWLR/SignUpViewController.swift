@@ -130,7 +130,7 @@ class SignUpViewController: UIViewController{
         else{
             self.user.firstName = self.firstNameTextField.text
             self.user.lastName = self.lastNameTextField.text
-            self.user.email = self.emailTextField.text
+            self.user.email = self.emailTextField.text?.lowercased()
             self.user.phone = self.phoneTextField.text
             self.performSegue(withIdentifier: "SignUpToSignUp2", sender: self)
         }
