@@ -8,6 +8,41 @@
 
 import Foundation
 
+struct User: Codable {
+    var _id: String?
+    var email: String?
+    var username: String?
+    var firstName: String?
+    var lastName: String?
+    var phone: String?
+    var age: Double?
+    var gender: String?
+    var weight: Double?
+    var height: String?
+    var settingsId: String?
+    var bac: Double?
+}
+
+struct Settings: Codable {
+    var _id: String?
+    var locationSharing: Bool?
+}
+
+struct Drink: Codable {
+    var _id: String?
+    var userId: String?
+    var beverage: String?
+    var date: String?
+    var amount: Double?
+}
+
+struct Beverage: Codable {
+    var _id: String?
+    var name: String?
+    var category: String?
+    var abv: Double?
+}
+
 struct Center: Codable {
     var longitude: Double?
     var latitude: Double?
