@@ -65,7 +65,7 @@ class DrinkTrackerViewController: UIViewController {
         formatter.dateFormat = "yyyy/MM/dd HH:mm:ss"
         var drinkRecord = Drink()
         drinkRecord.amount = 1
-        drinkRecord.beverage = self.drink
+        drinkRecord.beverage = self.drink?.lowercased()
         drinkRecord.date = formatter.string(from: currentDate)
         drinkRecord.userId = self.userId
         

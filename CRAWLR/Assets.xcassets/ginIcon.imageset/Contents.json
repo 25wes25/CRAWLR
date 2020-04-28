@@ -2,18 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "gin.png",
+      "filename" : "ginIcon.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "gin@2x.png",
+      "filename" : "ginIcon@2x.png",
       "scale" : "2x"
     },
     {
-      "filename" : "gin@3x.png",
-      "scale" : "3x",
-      "idiom" : "universal"
+      "idiom" : "universal",
+      "filename" : "ginIcon@3x.png",
+      "scale" : "3x"
     }
   ],
   "info" : {

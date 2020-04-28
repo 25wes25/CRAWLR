@@ -28,8 +28,8 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
     var user: User?
     
     var shots = ["TEQUILA", "WHISKEY", "VODKA", "GIN", "RUM", "MOONSHINE"];
-    var cocktails = ["MARGARITA", "COSMO", "SCREWDRIVER", "MIMOSA", "WINE", "CHAMPAIGN"];
-    var other = ["WHITE CLAW", "COORS", "CORONA", "HEINEKEN", "805", "GUINNESS"];
+    var cocktails = ["MARGARITA", "COSMO", "SCREWDRIVER", "MIMOSA", "MARTINI", "BLOODY MARY"];
+    var other = ["RED WINE", "WHITE WINE", "BEER 5%", "BEER 7%", "SELTZER", "CHAMPAGNE"];
 
     override func viewDidLoad() {
         super.viewDidLoad()
