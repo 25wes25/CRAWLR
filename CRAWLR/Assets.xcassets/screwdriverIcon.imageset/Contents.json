@@ -2,18 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "screwdriver.png",
+      "filename" : "screwdriverIcon.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "screwdriver@2x.png",
+      "filename" : "screwdriverIcon@2x.png",
       "scale" : "2x"
     },
     {
-      "filename" : "screwdriver@3x.png",
-      "scale" : "3x",
-      "idiom" : "universal"
+      "idiom" : "universal",
+      "filename" : "screwdriverIcon@3x.png",
+      "scale" : "3x"
     }
   ],
   "info" : {

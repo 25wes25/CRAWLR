@@ -2,18 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "margarita.png",
+      "filename" : "margaritaIcon.png",
       "scale" : "1x"
     },
     {
-      "scale" : "2x",
       "idiom" : "universal",
-      "filename" : "margarita@2x.png"
+      "filename" : "margaritaIcon@2x.png",
+      "scale" : "2x"
     },
     {
-      "scale" : "3x",
       "idiom" : "universal",
-      "filename" : "margarita@3x.png"
+      "filename" : "margaritaIcon@3x.png",
+      "scale" : "3x"
     }
   ],
   "info" : {
