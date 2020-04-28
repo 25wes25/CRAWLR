@@ -88,39 +88,45 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
         } else if self.selectedType == "other" {
             self.selectedDrink = self.other[indexPath.row]
         }
-        self.performSegue(withIdentifier: "DashboardToDrinkSegue", sender: self)
+        guard let drinkTrackerViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DrinkTrackerViewController") as? DrinkTrackerViewController else {return}
+        drinkTrackerViewController.drink = self.selectedDrink
+        drinkTrackerViewController.drinkType = self.selectedType
+        drinkTrackerViewController.userId = self.user?._id
+        self.present(drinkTrackerViewController, animated: true)
+        drinkTrackerViewController.yesButtonEvent = { drinkTrackerViewController.dismiss(animated: true) }
+        drinkTrackerViewController.noButtonEvent = { drinkTrackerViewController.dismiss(animated: true) }
     }
     
     @IBAction func onPressShotsButton(_ sender: Any) {
         self.selectedType = "shots"
         self.collectionView.reloadData()
-        self.shotsLabel.textColor = UIColor.init(red: 0, green: 184, blue: 252, alpha: 1)
+        self.shotsLabel.textColor = UIColor.init(red: 0/255, green: 184/255, blue: 252/255, alpha: 1)
         self.shotsUnderlineView.isHidden = false;
-        self.cocktailsLabel.textColor = UIColor.init(red: 0, green: 184, blue: 252, alpha: 0.5)
+        self.cocktailsLabel.textColor = UIColor.init(red: 0/255, green: 184/255, blue: 252/255, alpha: 0.5)
         self.cocktailsUnderlineView.isHidden = true;
-        self.otherLabel.textColor = UIColor.init(red: 0, green: 184, blue: 252, alpha: 0.5)
+        self.otherLabel.textColor = UIColor.init(red: 0/255, green: 184/255, blue: 252/255, alpha: 0.5)
         self.otherUnderlineView.isHidden = true;
     }
     
     @IBAction func onPressCocktailsButton(_ sender: Any) {
         self.selectedType = "cocktails"
         self.collectionView.reloadData()
-        self.shotsLabel.textColor = UIColor.init(red: 0, green: 184, blue: 252, alpha: 0.5)
+        self.shotsLabel.textColor = UIColor.init(red: 0/255, green: 184/255, blue: 252/255, alpha: 0.5)
         self.shotsUnderlineView.isHidden = true;
-        self.cocktailsLabel.textColor = UIColor.init(red: 0, green: 184, blue: 252, alpha: 1)
+        self.cocktailsLabel.textColor = UIColor.init(red: 0/255, green: 184/255, blue: 252/255, alpha: 1)
         self.cocktailsUnderlineView.isHidden = false;
-        self.otherLabel.textColor = UIColor.init(red: 0, green: 184, blue: 252, alpha: 0.5)
+        self.otherLabel.textColor = UIColor.init(red: 0/255, green: 184/255, blue: 252/255, alpha: 0.5)
         self.otherUnderlineView.isHidden = true;
     }
     
     @IBAction func onPressOtherButton(_ sender: Any) {
         self.selectedType = "other"
         self.collectionView.reloadData()
-        self.shotsLabel.textColor = UIColor.init(red: 0, green: 184, blue: 252, alpha: 0.5)
+        self.shotsLabel.textColor = UIColor.init(red: 0/255, green: 184/255, blue: 252/255, alpha: 0.5)
         self.shotsUnderlineView.isHidden = true;
-        self.cocktailsLabel.textColor = UIColor.init(red: 0, green: 184, blue: 252, alpha: 0.5)
+        self.cocktailsLabel.textColor = UIColor.init(red: 0/255, green: 184/255, blue: 252/255, alpha: 0.5)
         self.cocktailsUnderlineView.isHidden = true;
-        self.otherLabel.textColor = UIColor.init(red: 0, green: 184, blue: 252, alpha: 1)
+        self.otherLabel.textColor = UIColor.init(red: 0/255, green: 184/255, blue: 252/255, alpha: 1)
         self.otherUnderlineView.isHidden = false;
     }
     

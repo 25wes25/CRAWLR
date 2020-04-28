@@ -2,18 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Cosmo.png",
+      "filename" : "cosmoIcon.png",
       "scale" : "1x"
     },
     {
+      "scale" : "2x",
       "idiom" : "universal",
-      "filename" : "Cosmo@2x.png",
-      "scale" : "2x"
+      "filename" : "cosmoIcon@2x.png"
     },
     {
       "idiom" : "universal",
-      "filename" : "Cosmo@3x.png",
-      "scale" : "3x"
+      "scale" : "3x",
+      "filename" : "cosmoIcon@3x.png"
     }
   ],
   "info" : {
