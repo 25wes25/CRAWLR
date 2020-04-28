@@ -9,25 +9,26 @@
 import UIKit
 
 class EditProfileViewController: UIViewController, UITextFieldDelegate {
-    var usernameText : String? = ""
-    var weightText : String? = ""
-    var ageText : String? = ""
-    var heightText : String? = ""
+    var user:User?
+    var selectedUserID:String?
     
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var weightTextField: UITextField!
     @IBOutlet weak var ageTextField: UITextField!
     @IBOutlet weak var heightTextField: UITextField!
-
+    
+    @IBAction func onSaveButtonPress(_ sender: Any) {
+       
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        usernameTextField.text = usernameText
-        weightTextField.text = weightText
-        ageTextField.text = ageText
-        heightTextField.text = heightText
+        usernameTextField.text = user?.username
+        weightTextField.text = String(Int((user?.weight ?? 0))) + " lb"
+        ageTextField.text = String(Int(user?.age ?? 21))
+        heightTextField.text = (user?.height ?? "5'5") + "''"
         
         usernameTextField.delegate = self
         weightTextField.delegate = self
@@ -41,12 +42,7 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        usernameText = usernameTextField.text
-        weightText = weightTextField.text
-        ageText = ageTextField.text
-        heightText = heightTextField.text
-    }
+    
 }
 
 

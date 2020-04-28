@@ -9,47 +9,23 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-           
+    var user:User?
+    
+    
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var heightLabel: UILabel!
     
     
-    var usernameUpdate:String!{
-        willSet{
-            usernameLabel.text =  newValue
-        }
-    }
-    
-    var weightUpdate:String!{
-        willSet{
-            weightLabel.text = newValue
-        }
-    }
-    
-    var ageUpdate:String!{
-        willSet{
-            ageLabel.text = newValue
-        }
-    }
-    
-    var heightUpdate:String!{
-        willSet{
-            heightLabel.text = newValue
-        }
-    }
-    
-    var user: User?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
-        usernameLabel.text = "wesley"
-        weightLabel.text = "170 lb"
-        ageLabel.text = "22"
-        heightLabel.text = "6'2''"
+        usernameLabel.text = user?.username
+        weightLabel.text = String(Int((user?.weight ?? 120))) + " lb"
+        ageLabel.text = String(Int(user?.age ?? 21))
+        heightLabel.text = (user?.height ?? "5'5")
 
     }
     
@@ -59,42 +35,14 @@ class ProfileViewController: UIViewController {
     }
     
     override func prepare( for segue: UIStoryboardSegue, sender: Any?){
-        
         if segue.identifier == "Edit" {
-            let name = segue.destination as! EditProfileViewController
-            name.usernameText = usernameLabel.text
-            
-            let age = segue.destination as? EditProfileViewController
-            age?.ageText = ageLabel.text
-            
-            let weight = segue.destination as? EditProfileViewController
-            weight?.weightText = weightLabel.text
-            
-            let height = segue.destination as? EditProfileViewController
-            height?.heightText = heightLabel.text
- 
+            let edit = segue.destination as! EditProfileViewController
+            edit.user = self.user 
         }
     }
     
     @IBAction func unwindToThisView(sender: UIStoryboardSegue){
-        if let sourceViewController = sender.source as? EditProfileViewController{
-            usernameUpdate = sourceViewController.usernameText
-        }
         
-        
-        if let sourceViewController = sender.source as? EditProfileViewController{
-            ageUpdate = sourceViewController.ageText
-        }
-        
-        
-        if let sourceViewController = sender.source as? EditProfileViewController{
-            weightUpdate = sourceViewController.weightText
-        }
-        
-        
-        if let sourceViewController = sender.source as? EditProfileViewController{
-            heightUpdate = sourceViewController.heightText
-        }
          
     }
     
