@@ -88,4 +88,16 @@ class ApiHelper {
             }
         }
     }
+    
+    func trackDrink(drink: Drink, callback: @escaping (Drink?) -> Void) {
+        let url = URL(string: ApiHelper.drinksUrl)!
+        
+        Alamofire.SessionManager.default.request(url, .post, drink.asDictionary()).responseString { response in
+            if let userResponse = response.translate(to: Drink.self) {
+                callback(userResponse)
+            } else {
+                callback(nil)
+            }
+        }
+    }
 }

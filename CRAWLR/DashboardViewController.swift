@@ -88,7 +88,13 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
         } else if self.selectedType == "other" {
             self.selectedDrink = self.other[indexPath.row]
         }
-        self.performSegue(withIdentifier: "DashboardToDrinkSegue", sender: self)
+        guard let drinkTrackerViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DrinkTrackerViewController") as? DrinkTrackerViewController else {return}
+        drinkTrackerViewController.drink = self.selectedDrink
+        drinkTrackerViewController.drinkType = self.selectedType
+        drinkTrackerViewController.userId = self.user?._id
+        self.present(drinkTrackerViewController, animated: true)
+        drinkTrackerViewController.yesButtonEvent = { drinkTrackerViewController.dismiss(animated: true) }
+        drinkTrackerViewController.noButtonEvent = { drinkTrackerViewController.dismiss(animated: true) }
     }
     
     @IBAction func onPressShotsButton(_ sender: Any) {
