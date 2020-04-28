@@ -157,7 +157,7 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userIcon" translatesAutoresizingMaskIntoConstraints="NO" id="hZX-jh-ZBo">
-                                                        <rect key="frame" x="0.0" y="31.999999999999996" width="25.000000000000007" height="25.000000000000004"/>
+                                                        <rect key="frame" x="0.0" y="32" width="25" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="25" id="UVW-2e-jNn"/>
                                                             <constraint firstAttribute="width" constant="25" id="qCs-w7-ryv"/>

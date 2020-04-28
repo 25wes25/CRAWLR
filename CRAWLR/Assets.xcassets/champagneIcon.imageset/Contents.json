@@ -3,17 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "rum.png"
+      "filename" : "champagne.png"
     },
     {
-      "filename" : "rum@2x.png",
       "scale" : "2x",
+      "filename" : "champagne@2x.png",
       "idiom" : "universal"
     },
     {
-      "filename" : "rum@3x.png",
       "scale" : "3x",
-      "idiom" : "universal"
+      "idiom" : "universal",
+      "filename" : "champagne@3x.png"
     }
   ],
   "info" : {
