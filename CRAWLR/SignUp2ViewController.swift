@@ -46,13 +46,17 @@ class SignUp2ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        navigationController?.navigationBar.barTintColor = UIColor.black
+        navigationController?.navigationBar.isTranslucent = false
         handle = Auth.auth().addStateDidChangeListener { (auth, user) in
-
         }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        // Restore the navigation bar to defaults
+        navigationController?.navigationBar.barTintColor = nil
+        navigationController?.navigationBar.isTranslucent = true
         Auth.auth().removeStateDidChangeListener(handle!)
     }
     

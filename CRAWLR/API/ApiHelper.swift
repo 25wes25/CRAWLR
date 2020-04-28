@@ -76,4 +76,28 @@ class ApiHelper {
             }
         }
     }
+    
+    func getUser(email: String, callback: @escaping (User?) -> Void) {
+        let url = URL(string: ApiHelper.usersUrl + "/email/\(email)")!
+        
+        Alamofire.SessionManager.default.request(url, .get, nil).responseString { response in
+            if let userResponse = response.translate(to: User.self) {
+                callback(userResponse)
+            } else {
+                callback(nil)
+            }
+        }
+    }
+    
+    func trackDrink(drink: Drink, callback: @escaping (Drink?) -> Void) {
+        let url = URL(string: ApiHelper.drinksUrl)!
+        
+        Alamofire.SessionManager.default.request(url, .post, drink.asDictionary()).responseString { response in
+            if let userResponse = response.translate(to: Drink.self) {
+                callback(userResponse)
+            } else {
+                callback(nil)
+            }
+        }
+    }
 }

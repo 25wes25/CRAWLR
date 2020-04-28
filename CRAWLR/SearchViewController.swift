@@ -142,6 +142,22 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
             
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.navigationBar.barTintColor = UIColor.black
+        navigationController?.navigationBar.isTranslucent = false
+    
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        // Restore the navigation bar to defaults
+        navigationController?.navigationBar.barTintColor = nil
+        navigationController?.navigationBar.isTranslucent = true
+    }
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
         
