@@ -9,6 +9,7 @@
 import UIKit
 
 class EditProfileViewController: UIViewController, UITextFieldDelegate {
+    
     var user:User?
     var selectedUserID:String?
     
@@ -17,9 +18,7 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var ageTextField: UITextField!
     @IBOutlet weak var heightTextField: UITextField!
     
-    @IBAction func onSaveButtonPress(_ sender: Any) {
-       
-    }
+    @IBOutlet weak var saveButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +34,16 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate {
         ageTextField.delegate = self
         heightTextField.delegate = self
  
+    }
+    
+    @IBAction func onSaveButtonPress(_ sender: Any) {
+        let onDidUpdateUser: (User?) -> Void = { user in
+            self.user = user
+            //self.performSegue(withIdentifier: "EditProfileToProfileSegue", sender: self)
+        }
+        if let user = self.user {
+            ApiHelper.instance.updateUser(user: user, callback: onDidUpdateUser)
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

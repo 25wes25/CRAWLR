@@ -21,6 +21,7 @@
 		59E7A3CE23F4AC8E00B42135 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E7A3CD23F4AC8E00B42135 /* SignUpViewController.swift */; };
 		6E2B1FF924549DDF00694437 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2B1FF824549DDF00694437 /* EditProfileViewController.swift */; };
 		6E44B3D1240C3A0B003AEA01 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E44B3D0240C3A0B003AEA01 /* ProfileViewController.swift */; };
+		6EE6E25D24581D5A00DF6312 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE6E25C24581D5A00DF6312 /* SettingsViewController.swift */; };
 		E48528E4244FFE9F00A61CFC /* DoneDrinkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48528E3244FFE9F00A61CFC /* DoneDrinkingViewController.swift */; };
 		E4EB0450240860110096B39A /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EB044F240860110096B39A /* DashboardViewController.swift */; };
 		E62A9A19F6C5A7087DD749C0 /* Pods_CRAWLRTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B028A335A34AC63E74462CBD /* Pods_CRAWLRTests.framework */; };
@@ -78,6 +79,7 @@
 		59E7A3CD23F4AC8E00B42135 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		6E2B1FF824549DDF00694437 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		6E44B3D0240C3A0B003AEA01 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		6EE6E25C24581D5A00DF6312 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		91E830F04BEE61E25A352280 /* Pods-CRAWLR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRAWLR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CRAWLR/Pods-CRAWLR.debug.xcconfig"; sourceTree = "<group>"; };
 		B028A335A34AC63E74462CBD /* Pods_CRAWLRTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CRAWLRTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E48528E3244FFE9F00A61CFC /* DoneDrinkingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneDrinkingViewController.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				E88BF6F623F348A40084435A /* Main.storyboard */,
 				E88BF6CF23F340A90084435A /* Assets.xcassets */,
 				E88BF6D123F340A90084435A /* LaunchScreen.storyboard */,
+				6EE6E25C24581D5A00DF6312 /* SettingsViewController.swift */,
 				E88BF6D423F340A90084435A /* Info.plist */,
 				59AC50A124063906007F0C9C /* GoogleService-Info.plist */,
 				E88BF6F823F34D400084435A /* LoginViewController.swift */,
@@ -483,6 +486,7 @@
 				592E6F4824551E06000F51E5 /* ForgotPasswordViewController.swift in Sources */,
 				E817B259245803AF00F08629 /* DrinkTrackerViewController.swift in Sources */,
 				5935107C23F613BA001761B8 /* SignUp2ViewController.swift in Sources */,
+				6EE6E25D24581D5A00DF6312 /* SettingsViewController.swift in Sources */,
 				6E44B3D1240C3A0B003AEA01 /* ProfileViewController.swift in Sources */,
 				59E7A3CE23F4AC8E00B42135 /* SignUpViewController.swift in Sources */,
 				E874CEA3245161B10026C4A6 /* DataResponse+CrawlrCustom.swift in Sources */,

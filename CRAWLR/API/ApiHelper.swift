@@ -77,6 +77,23 @@ class ApiHelper {
         }
     }
     
+    func updateUser(user: User, callback: @escaping (User?) -> Void) {
+        let url = URL(string: ApiHelper.usersUrl)!
+        var newUser = user
+        
+        newUser.id = newUser._id
+        
+        Alamofire.SessionManager.default.request(url, .put, newUser.asDictionary()).responseString {
+            response in
+            if let userResponse = response.translate(to: User.self) {
+                callback(userResponse)
+            } else {
+                callback(nil)
+            }
+        }
+        
+    }
+    
     func getUser(email: String, callback: @escaping (User?) -> Void) {
         let url = URL(string: ApiHelper.usersUrl + "/email/\(email)")!
         

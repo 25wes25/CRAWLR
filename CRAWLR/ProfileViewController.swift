@@ -30,22 +30,22 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func EditProfile(_ sender: UIButton) {
-        performSegue(withIdentifier: "Edit", sender: self)
+        performSegue(withIdentifier: "ProfileToEditProfileSegue", sender: self)
         
     }
     
     override func prepare( for segue: UIStoryboardSegue, sender: Any?){
-        if segue.identifier == "Edit" {
+        if segue.identifier == "ProfileToEditProfileSegue" {
             let edit = segue.destination as! EditProfileViewController
             edit.user = self.user 
         }
     }
-    
-    @IBAction func unwindToThisView(sender: UIStoryboardSegue){
+    /*
+    @IBAction func unwindToProfileView(sender: UIStoryboardSegue){
         
          
     }
-    
+    */
  
 }
 
