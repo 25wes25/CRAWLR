@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iai-zU-Hw2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iai-zU-Hw2">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -1476,7 +1476,7 @@
                                         <rect key="frame" x="8" y="80" width="85" height="374"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="bacRuler" translatesAutoresizingMaskIntoConstraints="NO" id="Tro-sM-TaM">
-                                                <rect key="frame" x="0.0" y="0.0" width="53" height="373"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="53" height="373.00000000000011"/>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="arrowtriangle.left" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Pj3-7H-7aT">
                                                 <rect key="frame" x="55" y="10" width="18" height="20"/>
@@ -2405,8 +2405,6 @@
         <!--Edit Profile View Controller-->
         <scene sceneID="BUx-Av-vuW">
             <objects>
-                <exit id="XZS-UZ-dgN" userLabel="Exit" sceneMemberID="exit"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vj5-aP-gNH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController modalPresentationStyle="fullScreen" id="QvP-sE-g2Q" customClass="EditProfileViewController" customModule="CRAWLR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8cb-Aa-zgK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="574"/>
@@ -2637,6 +2635,8 @@
                         <outlet property="weightTextField" destination="tDp-pc-NAQ" id="rea-NN-A4X"/>
                     </connections>
                 </viewController>
+                <exit id="XZS-UZ-dgN" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vj5-aP-gNH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6018" y="797"/>
         </scene>
@@ -2648,10 +2648,11 @@
     <resources>
         <image name="Lyft" width="175" height="128"/>
         <image name="Uber" width="166" height="152"/>
-        <image name="arrowtriangle.left" catalog="system" width="128" height="113"/>
+        <image name="age" width="48" height="48"/>
+        <image name="arrowtriangle.left" catalog="system" width="64" height="56"/>
         <image name="bacButtonIcon" width="14.5" height="32"/>
         <image name="bacRuler" width="53" height="479"/>
-        <image name="barsIconBlue" width="49" height="41.5"/>
+        <image name="barsIconBlue" width="52" height="52"/>
         <image name="brickBackground" width="465" height="827"/>
         <image name="chevron.down" catalog="system" width="128" height="72"/>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
@@ -2663,15 +2664,19 @@
         <image name="doneDrinkingIcon" width="40" height="40"/>
         <image name="friesIcon" width="30.5" height="40.5"/>
         <image name="globeIcon" width="78" height="78"/>
+        <image name="height" width="42" height="42"/>
         <image name="largecircle.fill.circle" catalog="system" width="128" height="121"/>
         <image name="mapIcon" width="83" height="80"/>
         <image name="phoneIcon" width="70.5" height="73"/>
-        <image name="height" width="42" height="42"/>
         <image name="searchTabIcon" width="34.5" height="35.5"/>
         <image name="tempContact" width="158" height="158"/>
         <image name="unlockIcon" width="19.5" height="24"/>
         <image name="userIcon" width="24.5" height="24.5"/>
-        <image name="yelpIcon" width="50" height="50"/>
         <image name="weight" width="56" height="56"/>
+        <image name="yelpIcon" width="50" height="50"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="zTa-OX-Qvo"/>
+        <segue reference="p11-J8-lvQ"/>
+    </inferredMetricsTieBreakers>
 </document>
