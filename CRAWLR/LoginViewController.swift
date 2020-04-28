@@ -13,8 +13,9 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
-    
-    var password = "";
+    var email: String = ""
+    var password: String = ""
+    var user: User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,26 +58,49 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func onPressLogin(_ sender: Any) {
-        let username = usernameTextField.text!
-        let password = passwordTextField.text!
+        if let emailText = usernameTextField.text {
+            self.email = emailText.lowercased()
+        }
+        
+        if let passwordText = passwordTextField.text {
+            self.password = passwordText
+        }
         
         
-        if(username == "" || password == ""){
+        if(self.email == "" || self.password == ""){
             let alertController = UIAlertController.init(title: "Error", message: "Please enter an email and password", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
             self.present(alertController, animated: true, completion: nil)
         }
         else{
-            Auth.auth().signIn(withEmail: username, password: password) { authResult, error in
+            Auth.auth().signIn(withEmail: self.email, password: self.password) { authResult, error in
                 if(error != nil){
                     let alertController = UIAlertController.init(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
                     alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
                     self.present(alertController, animated: true, completion: nil)
                 }
                 else{
-                    self.performSegue(withIdentifier: "LoginSegueToTabBarController", sender: self)
+                    let didGetUser: (User?) -> Void = { user in
+                       self.user = user
+                       self.performSegue(withIdentifier: "LoginSegueToTabBarController", sender: self)
+                    }
+                    ApiHelper.instance.getUser(email: self.email, callback: didGetUser)
                 }
             }
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+       if segue.destination is UITabBarController {
+           let tabBarController = segue.destination as? UITabBarController
+           if let viewControllers = tabBarController?.viewControllers {
+               let dashboardNavigationController = viewControllers[0] as? UINavigationController
+               let dashboardViewController = dashboardNavigationController?.viewControllers[0] as? DashboardViewController
+               dashboardViewController?.user = self.user
+               let searchNavigationController = viewControllers[1] as? UINavigationController
+               let searchViewController = searchNavigationController?.viewControllers[0] as? SearchViewController
+               searchViewController?.user = self.user
+           }
+       }
     }
 }
