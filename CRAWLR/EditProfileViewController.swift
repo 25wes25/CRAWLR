@@ -64,49 +64,37 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate {
            view.endEditing(true)
        }
     
-//    @IBAction func onSaveButtonPress(_ sender: Any) {
-//        let onDidUpdateUser: (User?) -> Void = { user in
-//            self.user = user
-//            //self.performSegue(withIdentifier: "EditProfileToProfileSegue", sender: self)
-//        }
-//        if let user = self.user {
-//            ApiHelper.instance.updateUser(user: user, callback: onDidUpdateUser)
-//        }
-//    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        if let username = usernameTextField.text {
-            user?.username = username
-        }
+    @IBAction func onSaveButtonPress(_ sender: Any) {
+       if let username = usernameTextField.text {
+                   user?.username = username
+       }
+       
+       if let weight = weightTextField.text {
+           user?.weight = Double(weight)
+       }
+       
+       if let age = ageTextField.text {
+           if let ageDouble = Double(age) {
+               if ageDouble >= 21 {
+                  user?.age = ageDouble
+               } else {
+                   ageTextField.text = String(Int(user?.age ?? 21))
+                   let alertController = UIAlertController.init(title: "Error", message: "You must be at least 21 to use CRAWLR", preferredStyle: .alert)
+                   alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                   self.present(alertController, animated: true, completion: nil)
+               }
+           }
+       }
+       
+       if let height = heightTextField.text {
+           user?.height = height
+       }
         
-        if let weight = weightTextField.text {
-            user?.weight = Double(weight)
-        }
-        
-        if let age = ageTextField.text {
-            if let ageDouble = Double(age) {
-                if ageDouble >= 21 {
-                   user?.age = ageDouble
-                } else {
-                    ageTextField.text = String(Int(user?.age ?? 21))
-                    let alertController = UIAlertController.init(title: "Error", message: "You must be at least 21 to use CRAWLR", preferredStyle: .alert)
-                    alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-                    self.present(alertController, animated: true, completion: nil)
-                }
-            }
-        }
-        
-        if let height = heightTextField.text {
-            user?.height = height
-        }
+       self.performSegue(withIdentifier: "EditProfiletoProfileUnwindSegue", sender: self)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
-    
-    
 }
-
-
