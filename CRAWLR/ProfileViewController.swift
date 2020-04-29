@@ -22,9 +22,9 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         
         usernameLabel.text = user?.username
-        weightLabel.text = String(Int((user?.weight ?? 120))) + " lb"
+        weightLabel.text = String(Int((user?.weight ?? 0))) + " lb"
         ageLabel.text = String(Int(user?.age ?? 21))
-        heightLabel.text = (user?.height ?? "5'5")
+        heightLabel.text = (user?.height ?? "")
 
     }
     
@@ -38,9 +38,9 @@ class ProfileViewController: UIViewController {
             ApiHelper.instance.getUserByID(id: id, callback: onDidGetUserByID)
         }
         usernameLabel.text = user?.username
-        weightLabel.text = String(Int((user?.weight ?? 120))) + " lb"
+        weightLabel.text = String(Int((user?.weight ?? 0))) + " lb"
         ageLabel.text = String(Int(user?.age ?? 21))
-        heightLabel.text = (user?.height ?? "5'5")
+        heightLabel.text = (user?.height ?? "")
     }
     
     @IBAction func EditProfile(_ sender: UIButton) {
