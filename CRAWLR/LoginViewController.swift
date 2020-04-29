@@ -101,7 +101,7 @@ class LoginViewController: UIViewController {
                        self.user = user
                        self.performSegue(withIdentifier: "LoginSegueToTabBarController", sender: self)
                     }
-                    ApiHelper.instance.getUser(email: self.email, callback: didGetUser)
+                    ApiHelper.instance.getUserByEmail(email: self.email, callback: didGetUser)
                 }
             }
         }
