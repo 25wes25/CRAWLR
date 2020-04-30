@@ -9,95 +9,64 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-           
+    var user: User?
+    
+    
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var heightLabel: UILabel!
     
     
-    var usernameUpdate:String!{
-        willSet{
-            usernameLabel.text =  newValue
-        }
-    }
-    
-    var weightUpdate:String!{
-        willSet{
-            weightLabel.text = newValue
-        }
-    }
-    
-    var ageUpdate:String!{
-        willSet{
-            ageLabel.text = newValue
-        }
-    }
-    
-    var heightUpdate:String!{
-        willSet{
-            heightLabel.text = newValue
-        }
-    }
-    
-    var user: User?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        usernameLabel.text = "wesley"
-        weightLabel.text = "170 lb"
-        ageLabel.text = "22"
-        heightLabel.text = "6'2''"
+        usernameLabel.text = user?.username
+        weightLabel.text = String(Int((user?.weight ?? 120))) + " lb"
+        ageLabel.text = String(Int(user?.age ?? 21))
+        heightLabel.text = (user?.height ?? "5'5")
 
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let onDidGetUserByID: (User?) -> Void = { user in
+            self.user = user
+        }
+        if let id = self.user?._id {
+            ApiHelper.instance.getUserByID(id: id, callback: onDidGetUserByID)
+        }
+        usernameLabel.text = user?.username
+        weightLabel.text = String(Int((user?.weight ?? 120))) + " lb"
+        ageLabel.text = String(Int(user?.age ?? 21))
+        heightLabel.text = (user?.height ?? "5'5")
+    }
+    
     @IBAction func EditProfile(_ sender: UIButton) {
-        performSegue(withIdentifier: "Edit", sender: self)
+        performSegue(withIdentifier: "ProfileToEditProfileSegue", sender: self)
         
     }
     
     override func prepare( for segue: UIStoryboardSegue, sender: Any?){
-        
-        if segue.identifier == "Edit" {
-            let name = segue.destination as! EditProfileViewController
-            name.usernameText = usernameLabel.text
-            
-            let age = segue.destination as? EditProfileViewController
-            age?.ageText = ageLabel.text
-            
-            let weight = segue.destination as? EditProfileViewController
-            weight?.weightText = weightLabel.text
-            
-            let height = segue.destination as? EditProfileViewController
-            height?.heightText = heightLabel.text
- 
+        if segue.identifier == "ProfileToEditProfileSegue" {
+            let edit = segue.destination as! EditProfileViewController
+            edit.user = self.user 
         }
     }
     
-    @IBAction func unwindToThisView(sender: UIStoryboardSegue){
-        if let sourceViewController = sender.source as? EditProfileViewController{
-            usernameUpdate = sourceViewController.usernameText
+    @IBAction func unwindToProfile(_ unwindSegue: UIStoryboardSegue) {
+        let sourceViewController = unwindSegue.source as! EditProfileViewController
+        // Use data from the view controller which initiated the unwind segue
+        let onDidUpdateUser: (User?) -> Void = { user in
+            sourceViewController.user = user
+            self.user = user
+            
         }
-        
-        
-        if let sourceViewController = sender.source as? EditProfileViewController{
-            ageUpdate = sourceViewController.ageText
+        if let user = sourceViewController.user {
+            ApiHelper.instance.updateUser(user: user, callback: onDidUpdateUser)
         }
-        
-        
-        if let sourceViewController = sender.source as? EditProfileViewController{
-            weightUpdate = sourceViewController.weightText
-        }
-        
-        
-        if let sourceViewController = sender.source as? EditProfileViewController{
-            heightUpdate = sourceViewController.heightText
-        }
-         
     }
-    
  
 }
 
