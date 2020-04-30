@@ -10,6 +10,8 @@ import UIKit
 
 class EstimatedBACViewController: UIViewController {
     
+    var user: User?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -20,8 +22,13 @@ class EstimatedBACViewController: UIViewController {
         ]
 
         UINavigationBar.appearance().titleTextAttributes = attrs
-        
     }
     
-  
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is DrinkingHistoryViewController
+        {
+            let vc = segue.destination as? DrinkingHistoryViewController
+            vc?.user = self.user
+        }
+    }
 }

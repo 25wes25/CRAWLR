@@ -11,42 +11,47 @@ import UIKit
 struct cellData{
     var opened = Bool()
     var title = String()
-    var sectionData = [drink]()
-}
-
-struct drink{
-    var drinkName = String()
-    var time = String()
+    var sectionData = [Drink]()
 }
 
 class DrinkingHistoryViewController: UITableViewController {
     
+    var user: User?
+    var userDrinks: [Drink]?
     var tableViewData = [cellData]()
     var days = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        days = ["TONIGHT", "JULY 4th, 2019", "JULY 1st, 2019", "JUNE 29th, 2019"]
-        tableViewData = [cellData(opened: false, title: days[0], sectionData: [drink(drinkName: "TEQUILA SHOT", time: "8:57pm"), drink(drinkName: "VODKA SHOT", time: "8:58pm"), drink(drinkName: "BLOODY MARY", time: "9:00pm"), drink(drinkName: "TEQUILA SHOT", time: "9:17pm"), drink(drinkName: "TEQUILA SHOT", time: "10:00pm")]), cellData(opened: false, title: days[1], sectionData: [drink(drinkName: "TEQUILA SHOT", time: "8:57pm"), drink(drinkName: "VODKA SHOT", time: "8:58pm"), drink(drinkName: "BLOODY MARY", time: "9:00pm"), drink(drinkName: "TEQUILA SHOT", time: "9:17pm"), drink(drinkName: "TEQUILA SHOT", time: "10:00pm")]), cellData(opened: false, title: days[2], sectionData: [drink(drinkName: "TEQUILA SHOT", time: "8:57pm"), drink(drinkName: "VODKA SHOT", time: "8:58pm"), drink(drinkName: "BLOODY MARY", time: "9:00pm"), drink(drinkName: "TEQUILA SHOT", time: "9:17pm"), drink(drinkName: "TEQUILA SHOT", time: "10:00pm")]), cellData(opened: false, title: days[3], sectionData: [drink(drinkName: "TEQUILA SHOT", time: "8:57pm"), drink(drinkName: "VODKA SHOT", time: "8:58pm"), drink(drinkName: "BLOODY MARY", time: "9:00pm"), drink(drinkName: "TEQUILA SHOT", time: "9:17pm"), drink(drinkName: "TEQUILA SHOT", time: "10:00pm")])]
+        
+        let onDidGetUserDrinks: ([Drink]?) -> Void = { drinks in
+            self.userDrinks = drinks
+            
+            if let userDrinkList = self.userDrinks {
+                self.populateCells(userDrinkList: userDrinkList)
+            }
+            self.tableView.reloadData()
+        }
+        
+        if let userID = self.user?._id {
+            ApiHelper.instance.getUserDrinks(id: userID, callback: onDidGetUserDrinks)
+        }
     }
-
-    // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return tableViewData.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if tableViewData[section].opened == true{
+        if tableViewData[section].opened == true {
             return tableViewData[section].sectionData.count + 1
-        } else{
+        } else {
             return 1
         }
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if(indexPath.row == 0){
+        if (indexPath.row == 0) {
             let dayCell = tableView.dequeueReusableCell(withIdentifier: "dayCell",
                                   for: indexPath) as! DayCell
 
@@ -57,11 +62,12 @@ class DrinkingHistoryViewController: UITableViewController {
             dayCell.day?.text = theDay
             if tableViewData[indexPath.section].opened == true{
                 dayCell.picture?.image = UIImage(systemName: "chevron.up")
-            } else{
+            } else {
                 dayCell.picture?.image = UIImage(systemName: "chevron.down")
             }
                  
             return dayCell
+            
         } else {
             let drinkCell = tableView.dequeueReusableCell(withIdentifier: "drinkCell",
             for: indexPath) as! DrinkCell
@@ -70,25 +76,84 @@ class DrinkingHistoryViewController: UITableViewController {
             let theDrink = tableViewData[indexPath.section].sectionData[indexPath.row - 1]
                             
            // Configure the cell’s contents with data from the fetched object.
-            drinkCell.drinkName?.text = theDrink.drinkName
-            drinkCell.time?.text = theDrink.time
-                
-           return drinkCell
+            
+            drinkCell.drinkName?.text = theDrink.beverage?.uppercased()
+            
+            // Time Formatting
+            if let drinkTime = theDrink.date {
+                let formatter = DateFormatter()
+                formatter.dateFormat = "yyyy/MM/dd HH:mm:ss"
+                if let drinkTimeFormatted = formatter.date(from: drinkTime) {
+                    formatter.dateFormat = "h:mma"
+                    let drinkStringTimeFormatted = formatter.string(from: drinkTimeFormatted)
+                    drinkCell.time?.text = drinkStringTimeFormatted
+                }
+            }
+            return drinkCell
         }
         
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if tableViewData[indexPath.section].opened == true{
+        if tableViewData[indexPath.section].opened == true {
             tableViewData[indexPath.section].opened = false
             let sections = IndexSet.init(integer: indexPath.section)
             tableView.reloadSections(sections, with: .none)
-        } else{
+        } else {
             tableViewData[indexPath.section].opened = true
             let sections = IndexSet.init(integer: indexPath.section)
             tableView.reloadSections(sections, with: .none)
         }
     }
-
-
+    
+    func populateCells (userDrinkList: [Drink]) {
+        var drinkList = userDrinkList
+        drinkList.sort {
+            $0.date! > $1.date!
+        }
+        
+        for drink in drinkList {
+            if let drinkDate = drink.date {
+                let formatter = DateFormatter()
+                formatter.dateFormat = "yyyy/MM/dd HH:mm:ss"
+                if let drinkDateFormatted = formatter.date(from: drinkDate) {
+                    formatter.dateFormat = "MMM d, yyyy"
+                    let drinkStringDateFormatted = formatter.string(from: drinkDateFormatted)
+                    if !self.days.contains(drinkStringDateFormatted){
+                        self.days.append(drinkStringDateFormatted)
+                    }
+                }
+            }
+        }
+        
+        var sectionData = [Drink]()
+        for day in self.days {
+            if let userDrinkList = self.userDrinks{
+                for drink in userDrinkList {
+                    if let drinkDate = drink.date {
+                        let formatter = DateFormatter()
+                        formatter.dateFormat = "yyyy/MM/dd HH:mm:ss"
+                        if let drinkDateFormatted = formatter.date(from: drinkDate) {
+                            formatter.dateFormat = "MMM d, yyyy"
+                            let drinkStringDateFormatted = formatter.string(from: drinkDateFormatted)
+                            if drinkStringDateFormatted == day {
+                                sectionData.append(drink)
+                            }
+                        }
+                    }
+                }
+            }
+            
+            let currentDate = Date()
+            let formatter = DateFormatter()
+            formatter.dateFormat = "MMM d, yyyy"
+            let currentDateFormatted = formatter.string(from: currentDate)
+            if day == currentDateFormatted {
+                self.tableViewData.append(cellData(opened: false, title: "TODAY", sectionData: sectionData))
+            } else {
+                self.tableViewData.append(cellData(opened: false, title: day.uppercased(), sectionData: sectionData))
+            }
+            sectionData.removeAll()
+        }
+    }
 }
