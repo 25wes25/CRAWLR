@@ -123,4 +123,13 @@ class LoginViewController: UIViewController {
            }
        }
     }
+    
+    @IBAction func unwindToLogin(_ unwindSegue: UIStoryboardSegue) {
+        if ((unwindSegue.source as? SettingsViewController) != nil) {
+            self.email = ""
+            self.password = ""
+            self.usernameTextField.text = ""
+            self.passwordTextField.text = ""
+        }
+    }
 }

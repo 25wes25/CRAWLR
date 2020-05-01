@@ -69,24 +69,24 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func unwindToProfile(_ unwindSegue: UIStoryboardSegue) {
-        let sourceViewController = unwindSegue.source as! EditProfileViewController
-        // Use data from the view controller which initiated the unwind segue
-        let onDidUpdateUser: (User?) -> Void = { user in
-            sourceViewController.user = user
-            self.user = user
+        if let sourceViewController = unwindSegue.source as? EditProfileViewController {
+            // Use data from the view controller which initiated the unwind segue
+            let onDidUpdateUser: (User?) -> Void = { user in
+                sourceViewController.user = user
+                self.user = user
+                
+            }
+            if let user = sourceViewController.user {
+                ApiHelper.instance.updateUser(user: user, callback: onDidUpdateUser)
+            }
             
+            if let sourceVC = unwindSegue.source as? EditProfileViewController {
+                profilePic = sourceVC.profilePic
+                profilePicImageView.image = profilePic
+                profilePicImageView.contentMode = .scaleAspectFill
+                
+            }
         }
-        if let user = sourceViewController.user {
-            ApiHelper.instance.updateUser(user: user, callback: onDidUpdateUser)
-        }
-        
-        if let sourceVC = unwindSegue.source as? EditProfileViewController {
-            profilePic = sourceVC.profilePic
-            profilePicImageView.image = profilePic
-            profilePicImageView.contentMode = .scaleAspectFill
-            
-        }
-        
     }
     
 

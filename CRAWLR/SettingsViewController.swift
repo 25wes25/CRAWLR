@@ -36,11 +36,7 @@ class SettingsViewController: UIViewController {
                 self.present(alertController, animated: true, completion: nil)
         }
         
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let loginViewController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-        loginViewController.modalPresentationStyle = .fullScreen
-        present(loginViewController, animated:true, completion:nil)
-        
+        self.performSegue(withIdentifier: "unwindSegueToLogin", sender: self)
     }
     
 
