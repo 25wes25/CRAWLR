@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iai-zU-Hw2">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -33,7 +33,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController extendedLayoutIncludesOpaqueBars="YES" id="BYZ-38-t0r" customClass="LoginViewController" customModule="CRAWLR" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" extendedLayoutIncludesOpaqueBars="YES" id="BYZ-38-t0r" customClass="LoginViewController" customModule="CRAWLR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1591,20 +1591,20 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="drinkCell" id="2KF-dj-of7" customClass="DrinkCell" customModule="CRAWLR" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="74" width="375" height="58.5"/>
+                                <rect key="frame" x="0.0" y="74" width="375" height="58"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2KF-dj-of7" id="nvp-90-hww">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="58.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="58"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0G-n9-2eb">
-                                            <rect key="frame" x="64" y="19" width="138" height="20.5"/>
+                                            <rect key="frame" x="64" y="19" width="138" height="20"/>
                                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H48-fw-9lO">
-                                            <rect key="frame" x="282" y="19" width="37" height="20.5"/>
+                                            <rect key="frame" x="282" y="19" width="37" height="20"/>
                                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -2110,7 +2110,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ygi-OU-guS">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="574"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tempContact" translatesAutoresizingMaskIntoConstraints="NO" id="ToO-Wz-rf3" userLabel="ProfilePic">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ToO-Wz-rf3" userLabel="ProfilePic">
                                                 <rect key="frame" x="122.5" y="55" width="130" height="130"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="130" id="OR4-9Y-GW1"/>
@@ -2314,6 +2314,7 @@
                     <connections>
                         <outlet property="ageLabel" destination="RdH-6b-8TD" id="DMt-a3-lQj"/>
                         <outlet property="heightLabel" destination="Pg0-9a-QRO" id="OM4-aI-67h"/>
+                        <outlet property="profilePicImageView" destination="ToO-Wz-rf3" id="udi-rc-w6A"/>
                         <outlet property="usernameLabel" destination="EZc-4S-44d" id="oPg-Mw-jSI"/>
                         <outlet property="weightLabel" destination="WbA-Ph-lbn" id="KXx-Zc-TUb"/>
                     </connections>
@@ -2435,7 +2436,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0jk-TV-G6e">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="574"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tempContact" translatesAutoresizingMaskIntoConstraints="NO" id="bpl-zr-sp1" userLabel="profilePic">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bpl-zr-sp1" userLabel="profilePic">
                                                 <rect key="frame" x="118" y="65" width="140" height="140"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="140" id="wLq-wj-eti"/>
@@ -2457,6 +2458,9 @@
                                                 <state key="normal" title="Change Profile Photo">
                                                     <color key="titleColor" name="crawlrBlue"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="onChangeProfilePicPress:" destination="QvP-sE-g2Q" eventType="touchUpInside" id="HpW-py-rGq"/>
+                                                </connections>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="USERNAME" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r6K-on-RUj">
                                                 <rect key="frame" x="16" y="295" width="130" height="40"/>
@@ -2650,17 +2654,18 @@
                             <color key="tintColor" name="crawlrBlue"/>
                             <connections>
                                 <action selector="onSaveButtonPress:" destination="QvP-sE-g2Q" id="5nv-bY-5Al"/>
-                                <segue destination="I7o-qG-MiJ" kind="unwind" unwindAction="unwindToProfile:" id="Pmg-xj-8CX"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="EditProfilePicImageView" destination="bpl-zr-sp1" id="xGH-oM-adW"/>
                         <outlet property="ageTextField" destination="EGX-8o-39g" id="NXP-Rv-TeW"/>
                         <outlet property="heightTextField" destination="m6m-kO-PTk" id="P1k-dJ-tq4"/>
                         <outlet property="saveButton" destination="Gne-Rf-hGo" id="npx-It-tqJ"/>
                         <outlet property="scrollView" destination="eAd-LN-Vfx" id="f1i-gv-jfB"/>
                         <outlet property="usernameTextField" destination="C5f-tJ-wC8" id="Wu5-gG-Wib"/>
                         <outlet property="weightTextField" destination="tDp-pc-NAQ" id="rea-NN-A4X"/>
+                        <segue destination="I7o-qG-MiJ" kind="unwind" identifier="EditProfiletoProfileUnwindSegue" unwindAction="unwindToProfile:" id="yvb-FB-bN3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vj5-aP-gNH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
