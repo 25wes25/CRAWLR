@@ -129,4 +129,16 @@ class ApiHelper {
             }
         }
     }
+    
+    func getUserDrinks(id: String, callback: @escaping ([Drink]?) -> Void) {
+        let url = URL(string: ApiHelper.drinksUrl + "/user/\(id)")!
+        
+        Alamofire.SessionManager.default.request(url, .get, nil).responseString { response in
+            if let drinkResponse = response.translate(to: [Drink].self) {
+                callback(drinkResponse)
+            } else {
+                callback(nil)
+            }
+        }
+    }
 }

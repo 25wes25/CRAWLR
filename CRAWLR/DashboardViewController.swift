@@ -144,5 +144,11 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
                 vc?.drinkType = "BEVERAGE"
             }
         }
+        
+        if segue.destination is EstimatedBACViewController
+        {
+            let vc = segue.destination as? EstimatedBACViewController
+            vc?.user = self.user
+        }
     }
 }
