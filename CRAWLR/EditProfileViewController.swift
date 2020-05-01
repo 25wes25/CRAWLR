@@ -7,28 +7,46 @@
 //
 
 import UIKit
+import Photos
 
-class EditProfileViewController: UIViewController, UITextFieldDelegate {
+
+class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var user: User?
     var selectedUserID: String?
+    var profilePic : UIImage! = UIImage(named: "tempContact")
+    let picker = UIImagePickerController()
+
     
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var weightTextField: UITextField!
     @IBOutlet weak var ageTextField: UITextField!
     @IBOutlet weak var heightTextField: UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
-    
     @IBOutlet weak var saveButton: UIBarButtonItem!
+    @IBOutlet weak var EditProfilePicImageView: UIImageView!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        /*
+        if let userProfilePic = user?.profilePic {
+            profilePic = UIImage(data: userProfilePic)
+        }
+        else {
+            profilePic = UIImage(named: "tempContact")
+        }
+        */
         usernameTextField.text = user?.username
         weightTextField.text = String(Int((user?.weight ?? 0)))
         ageTextField.text = String(Int(user?.age ?? 21))
         heightTextField.text = (user?.height ?? "5'5")
+        EditProfilePicImageView.image = profilePic
+        EditProfilePicImageView.contentMode = .scaleAspectFill
+        picker.delegate = self
+        
         
         usernameTextField.delegate = self
         weightTextField.delegate = self
@@ -64,13 +82,45 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate {
            view.endEditing(true)
        }
     
+    
+    @IBAction func onChangeProfilePicPress(_ sender: Any) {
+        let photoAuthorizationStatus = PHPhotoLibrary.authorizationStatus()
+        PHPhotoLibrary.requestAuthorization({_ in
+            if photoAuthorizationStatus == .authorized{
+                self.changePhoto()
+            }
+            else if photoAuthorizationStatus == .restricted {
+                print("User do not have access to photo album.")
+            }
+            else if photoAuthorizationStatus == .denied {
+                print("User has denied the permission.")
+            }
+        })
+
+    }
+    
+    func changePhoto(){
+        picker.allowsEditing = false
+        picker.sourceType = .photoLibrary
+        present(picker, animated: true, completion: nil)
+    }
+    
     @IBAction func onSaveButtonPress(_ sender: Any) {
        if let username = usernameTextField.text {
-                   user?.username = username
+            user?.username = username
        }
        
        if let weight = weightTextField.text {
-           user?.weight = Double(weight)
+            if let weightDouble = Double(weight) {
+                if weightDouble >= 0 {
+                   user?.weight = weightDouble
+                } else {
+                    weightTextField.text = String(Int(user?.weight ?? 0))
+                    let alertController = UIAlertController.init(title: "Error", message: "You cannot have a negative weight", preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                    self.present(alertController, animated: true, completion: nil)
+                }
+            }
        }
        
        if let age = ageTextField.text {
@@ -89,13 +139,34 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate {
        if let height = heightTextField.text {
            user?.height = height
        }
-        
+        /*
+        if let userProfilePic = profilePic {
+            user?.profilePic = userProfilePic.pngData()
+        }
+        */
        self.performSegue(withIdentifier: "EditProfiletoProfileUnwindSegue", sender: self)
     }
-    */
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any] ){
+        if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            EditProfilePicImageView.contentMode = .scaleAspectFill
+            EditProfilePicImageView.image = pickedImage
+            profilePic = pickedImage
+        }
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }
+
+
+

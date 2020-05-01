@@ -10,23 +10,35 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     var user: User?
+    var profilePic : UIImage! = UIImage(named: "tempContact")
+    
+    
     
     
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var heightLabel: UILabel!
-    
+    @IBOutlet weak var profilePicImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        /*
+        if let userProfilePic = user?.profilePic {
+            profilePic = UIImage(data: userProfilePic)
+        }
+        else {
+            profilePic = UIImage(named: "tempContact")
+        }
+        */
         usernameLabel.text = user?.username
         weightLabel.text = String(Int((user?.weight ?? 0))) + " lb"
         ageLabel.text = String(Int(user?.age ?? 21))
         heightLabel.text = (user?.height ?? "")
+        profilePicImageView.image = profilePic
 
     }
+
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -51,7 +63,8 @@ class ProfileViewController: UIViewController {
     override func prepare( for segue: UIStoryboardSegue, sender: Any?){
         if segue.identifier == "ProfileToEditProfileSegue" {
             let edit = segue.destination as! EditProfileViewController
-            edit.user = self.user 
+            edit.user = self.user
+            edit.profilePic = self.profilePic
         }
     }
     
@@ -66,7 +79,17 @@ class ProfileViewController: UIViewController {
         if let user = sourceViewController.user {
             ApiHelper.instance.updateUser(user: user, callback: onDidUpdateUser)
         }
+        
+        if let sourceVC = unwindSegue.source as? EditProfileViewController {
+            profilePic = sourceVC.profilePic
+            profilePicImageView.image = profilePic
+            profilePicImageView.contentMode = .scaleAspectFill
+            
+        }
+        
     }
+    
+
  
 }
 
