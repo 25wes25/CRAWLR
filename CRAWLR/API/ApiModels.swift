@@ -22,12 +22,6 @@ struct User: Codable {
     var height: String?
     var settingsId: String?
     var bac: Double?
-    //var profilePic: Data?
-    /*
-    public init(photo: UIImage) {
-        self.profilePic = photo.pngData()!
-    }
- */
 }
 
 struct Settings: Codable {

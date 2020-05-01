@@ -30,15 +30,6 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        /*
-        if let userProfilePic = user?.profilePic {
-            profilePic = UIImage(data: userProfilePic)
-        }
-        else {
-            profilePic = UIImage(named: "tempContact")
-        }
-        */
         usernameTextField.text = user?.username
         weightTextField.text = String(Int((user?.weight ?? 0)))
         ageTextField.text = String(Int(user?.age ?? 21))
@@ -90,10 +81,14 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
                 self.changePhoto()
             }
             else if photoAuthorizationStatus == .restricted {
-                print("User do not have access to photo album.")
+                let alertController = UIAlertController.init(title: "Error", message: "User does not have access to photo library.", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                self.present(alertController, animated: true, completion: nil)
             }
             else if photoAuthorizationStatus == .denied {
-                print("User has denied the permission.")
+                let alertController = UIAlertController.init(title: "Error", message: "User has denied the permission.", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                self.present(alertController, animated: true, completion: nil)
             }
         })
 
@@ -139,11 +134,6 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
        if let height = heightTextField.text {
            user?.height = height
        }
-        /*
-        if let userProfilePic = profilePic {
-            user?.profilePic = userProfilePic.pngData()
-        }
-        */
        self.performSegue(withIdentifier: "EditProfiletoProfileUnwindSegue", sender: self)
     }
     
