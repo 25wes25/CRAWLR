@@ -11,10 +11,7 @@ import UIKit
 class ProfileViewController: UIViewController {
     var user: User?
     var profilePic : UIImage! = UIImage(named: "tempContact")
-    
-    
-    
-    
+
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
@@ -23,23 +20,17 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        /*
-        if let userProfilePic = user?.profilePic {
-            profilePic = UIImage(data: userProfilePic)
-        }
-        else {
-            profilePic = UIImage(named: "tempContact")
-        }
-        */
         usernameLabel.text = user?.username
         weightLabel.text = String(Int((user?.weight ?? 0))) + " lb"
         ageLabel.text = String(Int(user?.age ?? 21))
         heightLabel.text = (user?.height ?? "")
         profilePicImageView.image = profilePic
-
+        
+        let logo = UIImage(named: "Crawlr")
+        let imageView = UIImageView(image:logo)
+        self.navigationItem.titleView = imageView
     }
 
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
@@ -88,8 +79,4 @@ class ProfileViewController: UIViewController {
             }
         }
     }
-    
-
- 
 }
-
