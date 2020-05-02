@@ -35,6 +35,9 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
+        let logo = UIImage(named: "Crawlr")
+        let imageView = UIImageView(image:logo)
+        self.navigationItem.titleView = imageView
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

@@ -139,7 +139,10 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             locationManager.startUpdatingLocation()
         }
-            
+        
+        let logo = UIImage(named: "Crawlr")
+        let imageView = UIImageView(image:logo)
+        self.navigationItem.titleView = imageView
     }
     
     override func viewWillAppear(_ animated: Bool) {

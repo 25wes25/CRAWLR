@@ -1044,7 +1044,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="G6x-xB-EeQ"/>
                     </view>
-                    <navigationItem key="navigationItem" id="CcU-OR-pG3">
+                    <navigationItem key="navigationItem" title=" " id="CcU-OR-pG3">
                         <barButtonItem key="backBarButtonItem" title=" " id="bUr-tt-rEh"/>
                     </navigationItem>
                     <connections>
@@ -1529,7 +1529,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LvG-bW-gBf"/>
                     </view>
-                    <navigationItem key="navigationItem" title=" Estimated BAC" id="1sZ-5v-Zuz">
+                    <navigationItem key="navigationItem" title="ESTIMATED BAC" id="1sZ-5v-Zuz">
                         <barButtonItem key="backBarButtonItem" title=" " id="9CG-sQ-GzV"/>
                         <barButtonItem key="rightBarButtonItem" title=" " image="doneDrinkingIcon" id="fCk-my-bNU">
                             <connections>
@@ -1549,7 +1549,7 @@
             </objects>
             <point key="canvasLocation" x="6052" y="-586"/>
         </scene>
-        <!-- Drinking History-->
+        <!--DRINKING HISTORY-->
         <scene sceneID="ohh-K5-aRp">
             <objects>
                 <tableViewController id="Bmm-RZ-2za" customClass="DrinkingHistoryViewController" customModule="CRAWLR" customModuleProvider="target" sceneMemberID="viewController">
@@ -1644,7 +1644,7 @@
                             <outlet property="delegate" destination="Bmm-RZ-2za" id="aUd-hc-rxn"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title=" Drinking History" id="dHp-ON-BWY">
+                    <navigationItem key="navigationItem" title="DRINKING HISTORY" id="dHp-ON-BWY">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="doneDrinkingIcon" id="Tef-PX-i8P">
                             <connections>
                                 <segue destination="VS4-cv-UZ1" kind="show" id="BRP-Gn-nx4"/>
@@ -2048,7 +2048,9 @@
         <scene sceneID="8BV-X6-fIt">
             <objects>
                 <navigationController id="etD-Ys-d6C" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="dashboardTabIcon" id="rNg-YO-GcC"/>
+                    <tabBarItem key="tabBarItem" title="" image="dashboardTabIcon" id="rNg-YO-GcC">
+                        <color key="badgeColor" name="crawlrBlue"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" backIndicatorImage="chevron.left" catalog="system" backIndicatorTransitionMaskImage="chevron.left" id="E1u-vI-UGi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -2071,12 +2073,18 @@
         <scene sceneID="VNM-WH-xCb">
             <objects>
                 <navigationController id="4c4-xE-c0B" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="userIcon" id="bqh-cO-rL5"/>
+                    <tabBarItem key="tabBarItem" title="" image="userIcon" id="bqh-cO-rL5">
+                        <color key="badgeColor" name="crawlrBlue"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" backIndicatorImage="chevron.left" catalog="system" backIndicatorTransitionMaskImage="chevron.left" id="SPy-pZ-tgR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="wlE-WY-sq2" kind="relationship" relationship="rootViewController" id="lJM-4n-JMG"/>
@@ -2094,9 +2102,9 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="PWv-yX-W8J">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" red="0.069395087659999993" green="0.80434077979999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" name="crawlrBlue"/>
                         <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" name="crawlrBlue"/>
                     </tabBar>
                     <connections>
                         <segue destination="etD-Ys-d6C" kind="relationship" relationship="viewControllers" id="gxs-vD-vyO"/>
@@ -2339,11 +2347,16 @@
         <scene sceneID="3O5-Wu-k8V">
             <objects>
                 <navigationController id="Ddm-e7-HIB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="searchTabIcon" id="DTu-gG-8lK"/>
+                    <tabBarItem key="tabBarItem" title="" image="searchTabIcon" id="DTu-gG-8lK">
+                        <color key="badgeColor" name="crawlrBlue"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backIndicatorImage="chevron.left" catalog="system" backIndicatorTransitionMaskImage="chevron.left" id="mRW-1Z-uDJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="Rs5-5t-Uxu" kind="relationship" relationship="rootViewController" id="zgB-Kc-j83"/>
@@ -2434,7 +2447,7 @@
             </objects>
             <point key="canvasLocation" x="6052" y="-1435"/>
         </scene>
-        <!--Edit Profile View Controller-->
+        <!-- EDIT PROFILE-->
         <scene sceneID="BUx-Av-vuW">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="QvP-sE-g2Q" customClass="EditProfileViewController" customModule="CRAWLR" customModuleProvider="target" sceneMemberID="viewController">
@@ -2658,7 +2671,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CNT-jC-vTp"/>
                     </view>
-                    <navigationItem key="navigationItem" id="NDc-Ik-doW">
+                    <navigationItem key="navigationItem" title=" EDIT PROFILE" id="NDc-Ik-doW">
                         <barButtonItem key="backBarButtonItem" title=" " id="UM0-ca-ux2">
                             <color key="tintColor" name="crawlrBlue"/>
                         </barButtonItem>
@@ -2813,7 +2826,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nLq-KC-vOf">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="574"/>
                                         <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="NOTIFICATIONS" translatesAutoresizingMaskIntoConstraints="NO" id="vqD-Yu-2kW" userLabel="Notification Text View">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="NOTIFICATIONS" translatesAutoresizingMaskIntoConstraints="NO" id="vqD-Yu-2kW" userLabel="Notification Text View">
                                                 <rect key="frame" x="50" y="75" width="177" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="177" id="X8y-zr-fPS"/>
@@ -2823,7 +2836,7 @@
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="SOUND" translatesAutoresizingMaskIntoConstraints="NO" id="Y4f-OW-W8V" userLabel="Sound Text View">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="SOUND" translatesAutoresizingMaskIntoConstraints="NO" id="Y4f-OW-W8V" userLabel="Sound Text View">
                                                 <rect key="frame" x="50" y="150" width="168" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="168" id="Kr1-p6-kLH"/>
@@ -2833,7 +2846,7 @@
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="LOCATION" translatesAutoresizingMaskIntoConstraints="NO" id="pnw-Ga-FF9" userLabel="Location Text View">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="LOCATION" translatesAutoresizingMaskIntoConstraints="NO" id="pnw-Ga-FF9" userLabel="Location Text View">
                                                 <rect key="frame" x="50" y="225" width="177" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="177" id="M9O-Tu-15x"/>
@@ -2843,7 +2856,7 @@
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="CHANGE PASSWORD" translatesAutoresizingMaskIntoConstraints="NO" id="gPM-jr-HDa" userLabel="ChangePassword Text View">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="CHANGE PASSWORD" translatesAutoresizingMaskIntoConstraints="NO" id="gPM-jr-HDa" userLabel="ChangePassword Text View">
                                                 <rect key="frame" x="50" y="300" width="208" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="208" id="fxw-BC-dfB"/>
@@ -2853,7 +2866,7 @@
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="TERMS AND CONDITIONS" translatesAutoresizingMaskIntoConstraints="NO" id="E5u-Pr-lHp" userLabel="Terms&amp;Conditions Text View">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="TERMS AND CONDITIONS" translatesAutoresizingMaskIntoConstraints="NO" id="E5u-Pr-lHp" userLabel="Terms&amp;Conditions Text View">
                                                 <rect key="frame" x="50" y="375" width="208" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="208" id="A7u-Da-ZhR"/>
