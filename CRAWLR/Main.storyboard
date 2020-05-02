@@ -246,7 +246,7 @@
             </objects>
             <point key="canvasLocation" x="6" y="115"/>
         </scene>
-        <!--Forgot Password View Controller-->
+        <!-- FORGOT PASSWORD-->
         <scene sceneID="rJj-RP-kgp">
             <objects>
                 <viewController id="aQw-go-yBz" customClass="ForgotPasswordViewController" customModule="CRAWLR" customModuleProvider="target" sceneMemberID="viewController">
@@ -356,7 +356,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="n1L-5K-NVr"/>
                     </view>
-                    <navigationItem key="navigationItem" id="he2-2g-NnD"/>
+                    <navigationItem key="navigationItem" title=" FORGOT PASSWORD" id="he2-2g-NnD"/>
                     <connections>
                         <outlet property="emailTextField" destination="rJl-mc-BDD" id="8z1-0H-h03"/>
                         <outlet property="scrollView" destination="HdB-Ex-0XK" id="k0b-3M-cLj"/>
@@ -1603,20 +1603,20 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="drinkCell" id="2KF-dj-of7" customClass="DrinkCell" customModule="CRAWLR" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="74" width="375" height="58"/>
+                                <rect key="frame" x="0.0" y="74" width="375" height="58.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2KF-dj-of7" id="nvp-90-hww">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="58"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="58.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0G-n9-2eb">
-                                            <rect key="frame" x="64" y="19" width="138" height="20"/>
+                                            <rect key="frame" x="64" y="19" width="138" height="20.5"/>
                                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H48-fw-9lO">
-                                            <rect key="frame" x="282" y="19" width="37" height="20"/>
+                                            <rect key="frame" x="282" y="19" width="37" height="20.5"/>
                                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -2487,7 +2487,7 @@
                                                     <action selector="onChangeProfilePicPress:" destination="QvP-sE-g2Q" eventType="touchUpInside" id="HpW-py-rGq"/>
                                                 </connections>
                                             </button>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="USERNAME" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r6K-on-RUj">
+                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="USERNAME" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r6K-on-RUj">
                                                 <rect key="frame" x="16" y="295" width="130" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="130" id="Fj2-mk-lrS"/>
@@ -2497,7 +2497,7 @@
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="WEIGHT" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FSJ-YT-qhO">
+                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="WEIGHT" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FSJ-YT-qhO">
                                                 <rect key="frame" x="16" y="370" width="130" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="130" id="4Ap-xe-nKb"/>
@@ -2507,7 +2507,7 @@
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="AGE" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gyJ-JV-yQR">
+                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="AGE" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gyJ-JV-yQR">
                                                 <rect key="frame" x="16" y="445" width="130" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="GLt-2J-83y"/>
@@ -2517,7 +2517,7 @@
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="HEIGHT" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c7k-rM-exp">
+                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="HEIGHT" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c7k-rM-exp">
                                                 <rect key="frame" x="16" y="520" width="130" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="X2h-jh-NR6"/>
